@@ -1,6 +1,6 @@
 === IG Contact Form ===
 Contributors: innogears
-Tags: form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey, email form, online form, easy form builder
+Tags: form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey form, form, online form, easy form builder
 Requires at least: 3.8
 Tested up to: 3.9
 Stable tag: 3.8
