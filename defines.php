@@ -16,16 +16,16 @@ define( 'IG_UNIFORM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'IG_UNIFORM_URI', plugin_dir_url( __FILE__ ) );
 
 // Text domain for IG UniForm plugin
-define( 'IG_UNIFORM_TEXTDOMAIN', 'ig-contactform' );
+define( 'IG_UNIFORM_TEXTDOMAIN', 'ig-contact-form' );
 
 // Define product edition
 define( 'IG_UNIFORM_EDITION', 'FREE' );
 
 // Define product identified name
-define( 'IG_UNIFORM_IDENTIFIED_NAME', 'ig_contactform' );
+define( 'IG_UNIFORM_IDENTIFIED_NAME', 'ig_contact_form' );
 
 // Define product identified name
 define( 'IG_UNIFORM_DEPENDENCY', '' );
 
 // Define product identified name
-define( 'IG_UNIFORM_ADDONS', 'ig_contactform_addons_profields' );
+define( 'IG_UNIFORM_ADDONS', 'ig_contact_form_addons_profields' );
