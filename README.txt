@@ -7,19 +7,19 @@ Stable tag: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easiest drag-and-drop form builder that lets you create various forms in a wink
+The easiest drag-and-drop contact form builder that lets you create various forms in a wink
 
 == Description ==
 
-IG ContactForm is the ultimate solution for anyone who wants to build online forms. With this plugin, you can easily create from normal to complex forms for your WordPress website within a few minutes. 
+IG ContactForm is the ultimate solution for anyone who wants to build online forms. With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
 
-You'll surely love it for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
+You'll surely love this contact form builder for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
 
 Download and use IG ContactForm and you'll see it's the only WordPress form builder plugin you'll ever need.
 
 <h4>Key Features:</h4>
 
-* Super easy & quick form builder
+* Super easy & quick contact form builder
 * Fully responsive layout
 * Drag and drop layout
 * Flexible fields use
