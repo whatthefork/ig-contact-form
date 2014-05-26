@@ -1,6 +1,6 @@
 === IG Contact Form ===
 Contributors: innogears
-Tags: form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey form, form, online form, easy form builder
+Tags: contact form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey form, form, online form, easy form builder
 Requires at least: 3.8
 Tested up to: 3.9
 Stable tag: 3.8
@@ -11,18 +11,17 @@ The easiest drag-and-drop contact form builder that lets you create various form
 
 == Description ==
 
-IG ContactForm is the ultimate solution for anyone who wants to build online forms. With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
+IG Contact Form is the ultimate solution for anyone who wants to build online forms. With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
 
 You'll surely love this contact form builder for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
 
-Download and use IG ContactForm and you'll see it's the only WordPress contact form builder plugin you'll ever need.
+Download and use IG Contact Form and you'll see it's the only WordPress contact form builder plugin you'll ever need.
 
 <h4>Key Features:</h4>
 
 * Super easy & quick contact form builder
-* Fully responsive layout
-* Drag and drop layout
-* Flexible fields use
+* Building fully responsive forms* Drag and drop layout
+* Flexible field use
 * Built-in Form Style Editor
 
 <h4>Other features worth your attention:</h4>
@@ -49,13 +48,13 @@ Download and use IG ContactForm and you'll see it's the only WordPress contact f
 <i>*If you like the plugin, please vote for it!*</i>
 
 == Installation ==
-1. Upload IG ContactForm to the /wp-content/plugins/ directory
+1. Upload IG Contact Form to the /wp-content/plugins/ directory
 2. Activate the plugin through the \\\\\\\'Plugins\\\\\\\' menu in WordPress
 
 == Screenshots ==
 
-1. IG ContactForm layout
-2. IG ContactForm Fields
+1. IG Contact Form layout
+2. IG Contact Form Fields
 3. Form Style
 4. Form Entries Store
 
