@@ -1,6 +1,6 @@
 === IG Contact Form ===
 Contributors: innogears
-Tags: form builder, form, contact form, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey, email form, online form, easy form builder
+Tags: form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey, email form, online form, easy form builder
 Requires at least: 3.8
 Tested up to: 3.9
 Stable tag: 3.8
@@ -15,7 +15,7 @@ IG ContactForm is the ultimate solution for anyone who wants to build online for
 
 You'll surely love this contact form builder for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
 
-Download and use IG ContactForm and you'll see it's the only WordPress form builder plugin you'll ever need.
+Download and use IG ContactForm and you'll see it's the only WordPress contact form builder plugin you'll ever need.
 
 <h4>Key Features:</h4>
 
@@ -43,7 +43,7 @@ Download and use IG ContactForm and you'll see it's the only WordPress form buil
 
 <h4>Support</h4>
 
-* <a href="http://www.innogears.com/docs/http://www.innogears.com/docs/ig-contactform/">Documentation</a>
+* <a href="http://www.innogears.com/docs/ig-contactform/">Documentation</a>
 * <a href="http://www.innogears.com/support/forum.html">Support Forum</a>
 
 <i>*If you like the plugin, please vote for it!*</i>
