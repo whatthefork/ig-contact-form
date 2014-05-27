@@ -20,7 +20,8 @@ Download and use IG Contact Form and you'll see it's the only WordPress contact 
 <h4>Key Features:</h4>
 
 * Super easy & quick contact form builder
-* Building fully responsive forms* Drag and drop layout
+* Building fully responsive forms
+* Drag and drop layout
 * Flexible field use
 * Built-in Form Style Editor
 
