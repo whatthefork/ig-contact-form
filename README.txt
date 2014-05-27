@@ -1,17 +1,17 @@
 === IG Contact Form ===
 Contributors: innogears
-Tags: contact form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey form, form, online form, easy form builder
+Tags: contact form builder, contact form, contactform, custom form, form creator, form manage, form maker, web form, contact form builder, form generator, registration, survey form, easy contact form, online form, easy form builder
 Requires at least: 3.8
 Tested up to: 3.9
 Stable tag: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easiest drag-and-drop contact form builder that lets you create various forms in a wink
+The easiest drag-and-drop contact form builder that lets you create various form types in a wink
 
 == Description ==
 
-IG Contact Form is the ultimate solution for anyone who wants to build online forms. With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
+IG Contact Form is an extremely easy-to-use contact form builder for anyone who wants to build online forms. No code, no any skill required! With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
 
 You'll surely love this contact form builder for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
 
@@ -21,16 +21,16 @@ Download and use IG Contact Form and you'll see it's the only WordPress contact 
 
 * Super easy & quick contact form builder
 * Building fully responsive forms
-* Drag and drop layout
+* Drag and drop interface
 * Flexible field use
 * Built-in Form Style Editor
 
 <h4>Other features worth your attention:</h4>
 
+* Various fields to choose from
 * Easy to add form in Post/ Page/Widget
 * Multiple columns & pages form
 * Horizontal and Vertical Form layout 
-* Various fields to choose from
 * Conditional form field support
 * Email notification system 
 * Form data validation
@@ -46,7 +46,7 @@ Download and use IG Contact Form and you'll see it's the only WordPress contact 
 * <a href="http://www.innogears.com/docs/ig-contactform/">Documentation</a>
 * <a href="http://www.innogears.com/support/forum.html">Support Forum</a>
 
-<i>*If you like the plugin, please vote for it!*</i>
+<i>*If you like IG Contact Form, please vote for it!*</i>
 
 == Installation ==
 1. Upload IG Contact Form to the /wp-content/plugins/ directory
@@ -56,12 +56,12 @@ Download and use IG Contact Form and you'll see it's the only WordPress contact 
 
 1. IG Contact Form layout
 2. IG Contact Form Fields
-3. Form Style
-4. Form Entries Store
+3. IG Contact Form Style Editor
+4. IG Contact Form Entries Store
 
 == More Details ==
 
-For further information, product details, help and tutorials, please visit our website: http://www.innogears.com/
+For further information, product details, help and tutorials of IG Contact Form, please visit our website: http://www.innogears.com/plugins/ig-contactform.html
 
 == Changelog ==
 
