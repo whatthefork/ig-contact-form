@@ -34,8 +34,8 @@ class IG_Init_Post_Type {
 	 *     'slug' => 'sample_post_type',
 	 *     'options' => array(
 	 *         'labels' => array(
-	 *             'name' => __( 'Sample Items', IG_PLGFW_TEXTDOMAIN ),
-	 *             'singular_name' => __( 'Sample Item', IG_PLGFW_TEXTDOMAIN ),
+	 *             'name' => __( 'Sample Items', IG_CONTACTFORM_TEXTDOMAIN ),
+	 *             'singular_name' => __( 'Sample Item', IG_CONTACTFORM_TEXTDOMAIN ),
 	 *         ),
 	 *         'public' => true,
 	 *         'has_archive' => true
@@ -43,21 +43,21 @@ class IG_Init_Post_Type {
 	 *     'meta_boxes' => array(
 	 *         array(
 	 *             'id' => 'ig_contactform-item_url',
-	 *             'title' => __( 'URL', IG_PLGFW_TEXTDOMAIN )
+	 *             'title' => __( 'URL', IG_CONTACTFORM_TEXTDOMAIN )
 	 *         ),
 	 *         array(
 	 *             'id' => 'ig_contactform-item_referrer',
-	 *             'title' => __( 'Referrer', IG_PLGFW_TEXTDOMAIN )
+	 *             'title' => __( 'Referrer', IG_CONTACTFORM_TEXTDOMAIN )
 	 *         ),
 	 *         array(
 	 *             'id' => 'ig_contactform-item_host',
-	 *             'title' => __( 'Host', IG_PLGFW_TEXTDOMAIN )
+	 *             'title' => __( 'Host', IG_CONTACTFORM_TEXTDOMAIN )
 	 *         )
 	 *     ),
 	 *     'list_columns' => array(
-	 *         'url'      => __( 'URL', IG_PLGFW_TEXTDOMAIN ),
-	 *         'referrer' => __( 'Referrer', IG_PLGFW_TEXTDOMAIN ),
-	 *         'host'     => __( 'Host', IG_PLGFW_TEXTDOMAIN )
+	 *         'url'      => __( 'URL', IG_CONTACTFORM_TEXTDOMAIN ),
+	 *         'referrer' => __( 'Referrer', IG_CONTACTFORM_TEXTDOMAIN ),
+	 *         'host'     => __( 'Host', IG_CONTACTFORM_TEXTDOMAIN )
 	 *     ),
 	 *     'render_column' => array( 'ig_contactform_Post_Type', 'render_column' ),
 	 *     'sortable_columns' => true,
@@ -180,7 +180,7 @@ class IG_Init_Post_Type {
 			// Get data to show
 			$html = get_post_meta( $post_id, $column, true );
 		}
-		_e( $html, IG_PLGFW_TEXTDOMAIN );
+		_e( $html, IG_CONTACTFORM_TEXTDOMAIN );
 	}
 
 	/**
