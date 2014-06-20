@@ -25,12 +25,12 @@ $selectHtml = '';
 $selectHtml .= '<div class="jsn-form-field-select">';
 $selectHtml .= '<select ' . $this->html_attributes( 'placeholder', true ) . '>';
 if ( $this->placeholder ) {
-	$selectHtml .= '<option value="">' . __( $this->placeholder, IG_UNIFORM_TEXTDOMAIN ) . '</option>';
+	$selectHtml .= '<option value="">' . __( $this->placeholder, IG_CONTACTFORM_TEXTDOMAIN ) . '</option>';
 }
 foreach ( $this->choices AS $value => $label ) {
 	if ( is_array( $label ) && $label[ 'type' ] == 'optiongroup' ) {
-		$selectHtml .= '<optgroup label="' . __( $label[ 'text' ], IG_UNIFORM_TEXTDOMAIN ) . '">';
-		$selectHtml .= __( $label[ 'text' ], IG_UNIFORM_TEXTDOMAIN );
+		$selectHtml .= '<optgroup label="' . __( $label[ 'text' ], IG_CONTACTFORM_TEXTDOMAIN ) . '">';
+		$selectHtml .= __( $label[ 'text' ], IG_CONTACTFORM_TEXTDOMAIN );
 		if ( is_array( $label[ 'options' ] ) ) {
 			foreach ( $label[ 'options' ] as $optionKey => $optionVal ) {
 				if ( is_array( $optionVal ) ) {
@@ -47,7 +47,7 @@ foreach ( $this->choices AS $value => $label ) {
 					$selected = 'selected="selected"';
 				}
 				$selectHtml .= '<option value="' . $optionKey . '"  ' . $attrs . ' ' . $selected . '>';
-				$selectHtml .= __( $optionVal, IG_UNIFORM_TEXTDOMAIN );
+				$selectHtml .= __( $optionVal, IG_CONTACTFORM_TEXTDOMAIN );
 				$selectHtml .= '</option>';
 			}
 		}
@@ -71,7 +71,7 @@ foreach ( $this->choices AS $value => $label ) {
 			$selected = 'selected="selected"';
 		}
 		$selectHtml .= '<option value="' . $value . '"  ' . $attrs . ' ' . $selected . '>';
-		$selectHtml .= __( $label, IG_UNIFORM_TEXTDOMAIN );
+		$selectHtml .= __( $label, IG_CONTACTFORM_TEXTDOMAIN );
 		$selectHtml .= '</option>';
 	}
 

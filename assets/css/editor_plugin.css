@@ -7,20 +7,20 @@
  * @license GNU/GPL v2 http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-.ig-uniform-thickbox-header,
-.ig-uniform-thickbox-content {
+.ig-contactform-thickbox-header,
+.ig-contactform-thickbox-content {
     padding: 15px 15px 0 15px;
 }
 
-.ig-uniform-thickbox-messages {
+.ig-contactform-thickbox-messages {
     padding: 8px 0 0 0;
     font-size: 11px;
     font-style: italic;
     color: #5A5A5A;
 }
-.ig-uniform-thicjbox-action{
+.ig-contactform-thicjbox-action{
     padding:15px;
 }
-.ig-uniform-thicjbox-action a{
+.ig-contactform-thicjbox-action a{
     color:#bbb;
 }

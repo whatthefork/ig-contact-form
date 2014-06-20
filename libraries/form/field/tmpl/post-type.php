@@ -3,13 +3,13 @@
  * @version    $Id$
  * @package    IG_Library
  * @author     InnoGears Team <support@innogears.com>
- * @copyright  Copyright (C) 2012 InnoGears.com. All Rights Reserved.
+ * @copyright  Copyright (C) 2014 InnoGears.com. All Rights Reserved.
  * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Websites: http://www.innogears.com
  */
 ?>
-<ul class="<?php if ( ! @empty( $this->attributes['class'] ) ) echo esc_attr( $this->attributes['class'] ) . ' '; ?>ig-form-field-post-type" id="<?php $this->get( 'id' ); ?>">
+<ul class="<?php if ( ! @empty( $this->attributes['class'] ) ) echo esc_attr( $this->attributes['class'] ) . ' '; ?>" id="<?php $this->get( 'id' ); ?>">
 <?php
 // Backup original attributes
 $original_attrs = $this->attributes;

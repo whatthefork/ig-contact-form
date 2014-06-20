@@ -11,13 +11,13 @@ $assets = array(
 	'ig-jquery-ui-css',
 	'ig-jquery-tipsy-css',
 	'ig-bootstrap2-responsive-css',
-	'ig-uniform-css',
+	'ig-contactform-css',
 	'ig-jquery-json-js',
 	'ig-http-googlemaps-api-js',
 	'ig-googlemaps-ui-js',
 	'ig-googlemaps-services-js',
 	'ig-googlemaps-extensions-js',
-	'ig-uniform-submission-js',
+	'ig-contactform-submission-js',
 );
 IG_Init_Assets::load( $assets );
 $submissionID = ! empty( $_GET[ 'post' ] ) ? (int)$_GET[ 'post' ] : '';
@@ -25,12 +25,12 @@ $dataSubmission = get_post( $submissionID );
 $formID = ! empty( $dataSubmission->post_content ) ? (int)$dataSubmission->post_content : '';
 
 if ( empty( $formID ) ) {
-	header( 'Location: ' . get_admin_url() . 'edit.php?post_type=ig_uniform_sb' );
+	header( 'Location: ' . get_admin_url() . 'edit.php?post_type=ig_cfsb_post_type' );
 	exit();
 }
 $formPostMeta = get_post_meta( $formID );
-$formContent = IGUniformHelper::get_form_content( $formID );
-$submissionData = IGUniformHelper::get_form_data( $formID, $submissionID );
+$formContent = IGContactformHelper::get_form_content( $formID );
+$submissionData = IGContactformHelper::get_form_data( $formID, $submissionID );
 $submission = new stdClass;
 if ( ! empty( $submissionData ) ) {
 	foreach ( $submissionData as $sData ) {
@@ -49,10 +49,10 @@ if ( ! empty( $submissionData ) ) {
 		<div class="ig-tabs">
 			<ul>
 				<li>
-					<a href="#submission-data"></i><?php echo ''.__( 'Data', IG_UNIFORM_TEXTDOMAIN );?></a>
+					<a href="#submission-data"></i><?php echo ''.__( 'Data', IG_CONTACTFORM_TEXTDOMAIN );?></a>
 				</li>
 				<li>
-					<a href="#submission-details"></i><?php echo ''.__( 'Details', IG_UNIFORM_TEXTDOMAIN );?></a>
+					<a href="#submission-details"></i><?php echo ''.__( 'Details', IG_CONTACTFORM_TEXTDOMAIN );?></a>
 				</li>
 			</ul>
 			<div id="submission-details" class="submission-details">
@@ -60,7 +60,7 @@ if ( ! empty( $submissionData ) ) {
 					<table class="table table-bordered">
 						<tr>
 							<th>
-								<?php echo '' . __( 'Form', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<?php echo '' . __( 'Form', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</th>
 							<td class="form-title">
 								<?php
@@ -70,7 +70,7 @@ if ( ! empty( $submissionData ) ) {
 						</tr>
 						<tr>
 							<th>
-								<?php echo '' . __( 'IG_UNIFORM_SUBMISSION_CREATED_AT', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<?php echo '' . __( 'IG_CONTACTFORM_SUBMISSION_CREATED_AT', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</th>
 							<td>
 								<?php
@@ -81,19 +81,19 @@ if ( ! empty( $submissionData ) ) {
 						</tr>
 						<tr>
 							<th>
-								<?php echo '' . __( 'IG_UNIFORM_SUBMISSION_IP', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<?php echo '' . __( 'IG_CONTACTFORM_SUBMISSION_IP', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</th>
 							<td><?php echo '' . $submission->ip; ?></td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo '' . __( 'IG_UNIFORM_SUBMISSION_BROWSER', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<?php echo '' . __( 'IG_CONTACTFORM_SUBMISSION_BROWSER', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</th>
 							<td><?php echo  '' . $submission->browser; ?></td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo '' . __( 'IG_UNIFORM_SUBMISSION_OS', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<?php echo '' . __( 'IG_CONTACTFORM_SUBMISSION_OS', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</th>
 							<td><?php echo  '' . $submission->os; ?></td>
 						</tr>
@@ -107,11 +107,11 @@ $formType = isset( $formPostMeta[ 'form_type' ][ 0 ] ) ? $formPostMeta[ 'form_ty
 if ( $formType == 2 ) {
 	?>
 	<div class="control-group ">
-		<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_DATA_PRESENTATION', IG_UNIFORM_TEXTDOMAIN ); ?>:</label>
+		<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_DATA_PRESENTATION', IG_CONTACTFORM_TEXTDOMAIN ); ?>:</label>
 		<div class="controls">
 			<select class="jsn-input-fluid" data-value="<?php echo '' . $formType; ?>" id="jform_form_type">
-				<option value="1"><?php echo '' . __( 'IG_UNIFORM_TYPE_SINGLE_PAGE', IG_UNIFORM_TEXTDOMAIN ); ?></option>
-				<option value="2"><?php echo '' . __( 'IG_UNIFORM_TYPE_MULTIPLE_PAGES', IG_UNIFORM_TEXTDOMAIN ); ?></option>
+				<option value="1"><?php echo '' . __( 'IG_CONTACTFORM_TYPE_SINGLE_PAGE', IG_CONTACTFORM_TEXTDOMAIN ); ?></option>
+				<option value="2"><?php echo '' . __( 'IG_CONTACTFORM_TYPE_MULTIPLE_PAGES', IG_CONTACTFORM_TEXTDOMAIN ); ?></option>
 			</select>
 		</div>
 	</div>
@@ -121,10 +121,10 @@ if ( $formType == 2 ) {
 					<div class="control-group pull-right">
 						<div class="controls">
 							<button class="btn" id="ig-submission-edit" onclick="return false;">
-								<i class="icon-pencil"></i><?php echo '' . __( 'Edit', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<i class="icon-pencil"></i><?php echo '' . __( 'Edit', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</button>
 							<button class="btn btn-primary hide" id="ig-submission-save" onclick="return false;">
-								<i class="icon-pencil"></i><?php echo '' . __( 'IG_UNIFORM_DONE', IG_UNIFORM_TEXTDOMAIN ); ?>
+								<i class="icon-pencil"></i><?php echo '' . __( 'IG_CONTACTFORM_DONE', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 							</button>
 						</div>
 					</div>
@@ -152,7 +152,7 @@ foreach ( $formContent as $formPages ) {
 			$contentFieldEdit = '';
 			$contentFieldDetail = '';
 			if ( isset( $submission->$key ) ) {
-				$contentField = IGUniformHelper::get_data_field( $fields->type, $submission, $key, $this->_item->form_id, false );
+				$contentField = IGContactformHelper::get_data_field( $fields->type, $submission, $key, $this->_item->form_id, false );
 				$contentFieldEdit = $contentField;
 				if ( $fields->type == 'email' ) {
 					$contentFieldDetail = ! empty( $contentField ) ? '<a href="mailto:' . $contentField . '">' . $contentField . '</a>' : 'N/A';

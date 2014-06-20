@@ -5,12 +5,12 @@
 
 				<div class="ig-product-about jsn-pane jsn-bgpattern pattern-sidebar">
 					<h2 class="jsn-section-header">
-						<a target="_blank" href="http://www.innogears.com/ig-uniform.html">IG UniForm <?php echo '' . IG_UNIFORM_EDITION ;?></a>
+						<a target="_blank" href="http://www.innogears.com/ig-contactform.html">IG ContactForm <?php echo '' . IG_CONTACTFORM_EDITION ;?></a>
 					</h2>
 
 					<div class="ig-product-intro jsn-section-content">
 						<div class="ig-product-thumbnail">
-							<a target="_blank" href="http://www.innogears.com/ig-uniform.html"><img alt="" src="/j30/thailv/administrator/components/com_uniform/assets/images/product-thumbnail.png"></a>
+							<a target="_blank" href="http://www.innogears.com/ig-contactform.html"><img alt="" src="/j30/thailv/administrator/components/com_contactform/assets/images/product-thumbnail.png"></a>
 						</div>
 						<div class="ig-product-details">
 							<dl>
@@ -22,7 +22,7 @@
 								<dd>Copyright (c) 2014 - Innogears.com</dd>
 								<dt>Version:</dt>
 								<dd>
-									<strong class="ig-current-version"><?php echo '' . IG_UNIFORM_VERSION ;?></strong>&nbsp;-&nbsp;<span id="ig-check-version-result"><span class="ig-latest-version"><span class="label label-success">The latest version</span></span></span>
+									<strong class="ig-current-version"><?php echo '' . IG_CONTACTFORM_VERSION ;?></strong>&nbsp;-&nbsp;<span id="ig-check-version-result"><span class="ig-latest-version"><span class="label label-success">The latest version</span></span></span>
 								</dd>
 							</dl>
 						</div>
@@ -59,7 +59,7 @@
 						<p>Having problems using the product? No worries:</p>
 						<ul>
 							<li>
-								<a class="jsn-link-action" target="_blank" href="http://www.innogears.com/joomla-extensions/ig-uniform-docs.zip">Read documentation</a> in PDF format.
+								<a class="jsn-link-action" target="_blank" href="http://www.innogears.com/joomla-extensions/ig-contactform-docs.zip">Read documentation</a> in PDF format.
 							</li>
 							<li>
 								<a class="jsn-link-action" target="_blank" href="http://www.innogears.com/forum.html">Ask in Support Forum</a> for community to help.
@@ -85,7 +85,7 @@
 								<strong>"Customers Testimonials"</strong> page.
 							</li>
 							<li>
-								<a class="jsn-link-action" target="_blank" href="http://www.innogears.com/joomla-extensions/ig-uniform-on-jed.html">Post a rating and a review</a> at the Joomla! Extensions Directory.
+								<a class="jsn-link-action" target="_blank" href="http://www.innogears.com/joomla-extensions/ig-contactform-on-jed.html">Post a rating and a review</a> at the Joomla! Extensions Directory.
 							</li>
 						</ul>
 					</div>

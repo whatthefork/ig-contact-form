@@ -12,7 +12,7 @@
 /**
  * Installer
  */
-class IG_Uniform_Installer {
+class IG_Contactform_Installer {
 
 	public function on_activate_function() {
 		global $wpdb;
@@ -23,8 +23,8 @@ class IG_Uniform_Installer {
 			if ( ! empty( $wpdb->collate ) ) $collate .= " COLLATE $wpdb->collate";
 		}
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-		$uniformTables = "
-          CREATE TABLE {$wpdb->prefix}ig_uniform_fields (
+		$contactformTables = "
+          CREATE TABLE {$wpdb->prefix}ig_contactform_fields (
             field_id int(11) NOT NULL AUTO_INCREMENT,
             form_id int(11) NOT NULL,
             field_type varchar(45) NOT NULL,
@@ -37,7 +37,7 @@ class IG_Uniform_Installer {
             PRIMARY KEY (field_id)
           ) $collate;
 
-          CREATE TABLE {$wpdb->prefix}ig_uniform_form_pages (
+          CREATE TABLE {$wpdb->prefix}ig_contactform_form_pages (
             page_id int(11) NOT NULL AUTO_INCREMENT,
             page_title varchar(255) NOT NULL,
             form_id int(11) NOT NULL,
@@ -47,7 +47,7 @@ class IG_Uniform_Installer {
             PRIMARY KEY (page_id)
           )$collate;
 
-          CREATE TABLE {$wpdb->prefix}ig_uniform_submission_data (
+          CREATE TABLE {$wpdb->prefix}ig_contactform_submission_data (
             submission_data_id int(11) NOT NULL AUTO_INCREMENT,
             submission_id int(11) NOT NULL,
             form_id int(11) NOT NULL,
@@ -61,7 +61,7 @@ class IG_Uniform_Installer {
             KEY field_id (field_id)
           )$collate;
           ";
-		dbDelta( $uniformTables );
+		dbDelta( $contactformTables );
 	}
 
 	public function on_uninstaller_function() {

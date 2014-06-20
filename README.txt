@@ -67,7 +67,13 @@ For further information, product details, help and tutorials of IG Contact Form,
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* Added reCaptcha and SecureImag validation
+* Fixed Submit function doesn't work if the function "Hide form field" of Dropdown/ Checkboxes/ Multiple choices have two or more options
+* Fixed Notices hang all ajax scripts when adding a new form
+* Fixed Email issues
+
+= 1.0.0 =
 
 
 

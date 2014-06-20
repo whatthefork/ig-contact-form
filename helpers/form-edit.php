@@ -6,12 +6,12 @@
  * Time: 10:41 AM
  * To change this template use File | Settings | File Templates.
  */
-class IGUniformEditForm {
+class IGContactformEditForm {
 
 	public function __construct() {
-		add_action( 'ig_uniform_form_container_tabs', array( &$this, 'add_container_form_design' ), 10, 8 );
-		add_action( 'ig_uniform_form_container_tabs', array( &$this, 'add_container_form_action' ), 10, 8 );
-		add_action( 'ig_uniform_form_edit_form_bar', array( &$this, 'add_form_bar' ), 10, 8 );
+		add_action( 'ig_contactform_form_container_tabs', array( &$this, 'add_container_form_design' ), 10, 8 );
+		add_action( 'ig_contactform_form_container_tabs', array( &$this, 'add_container_form_action' ), 10, 8 );
+		add_action( 'ig_contactform_form_edit_form_bar', array( &$this, 'add_form_bar' ), 10, 8 );
 	}
 
 	public function add_form_bar( $form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage ) {
@@ -33,7 +33,7 @@ class IGUniformEditForm {
 		<?php
 		$vertical = '';
 		$horizontal = '';
-		if ( empty( $formStyle->layout ) && $formStyle->layout == 'Vertical' ) {
+		if ( isset ( $formStyle->layout ) && ( empty( $formStyle->layout ) || $formStyle->layout == 'Vertical' ) ) {
 			$vertical = 'selected';
 		}
 		else if ( ! empty( $formStyle->layout ) && $formStyle->layout == 'form-horizontal' ) {
@@ -43,10 +43,10 @@ class IGUniformEditForm {
 			<div class="controls">
 				<select id="jform_form_style" style="width:100px" name="form_style[layout]" class="jsn-input-fluid">
 					<option <?php echo '' . $vertical;?> value="Vertical">
-						<?php echo '' . __( 'Vertical', IG_UNIFORM_TEXTDOMAIN );?>
+						<?php echo '' . __( 'Vertical', IG_CONTACTFORM_TEXTDOMAIN );?>
 					</option>
 					<option <?php echo '' . $horizontal;?> value="form-horizontal">
-						<?php echo '' . __( 'Horizontal', IG_UNIFORM_TEXTDOMAIN );?>
+						<?php echo '' . __( 'Horizontal', IG_CONTACTFORM_TEXTDOMAIN );?>
 					</option>
 				</select>
 			</div>
@@ -134,7 +134,7 @@ class IGUniformEditForm {
 							</ul>
 							<div id="formStyleContainer">
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BACKGROUND_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BACKGROUND_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="background-color" data-type="jsn-element" value="<?php echo '' . $formStyle->background_color;?>" class="jsn-input-fluid" name="form_style[background_color]" id="style_background_color" />
@@ -145,7 +145,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BACKGROUND_ACTIVE_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BACKGROUND_ACTIVE_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="background-color" data-type="ui-state-edit" value="<?php echo '' . $formStyle->background_active_color;?>" class="jsn-input-fluid" name="form_style[background_active_color]" id="style_background_active_color" />
@@ -156,7 +156,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BORDER_THICKNESS', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BORDER_THICKNESS', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<div class="input-append">
@@ -165,7 +165,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BORDER_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BORDER_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="border-color" data-type="jsn-element" value="<?php echo '' . $formStyle->border_color;?>" class="jsn-input-fluid" name="form_style[border_color]" id="style_border_color" />
@@ -176,7 +176,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BORDER_ACTIVE_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BORDER_ACTIVE_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="border-color" data-type="ui-state-edit" value="<?php echo '' . $formStyle->border_active_color;?>" class="jsn-input-fluid" name="form_style[border_active_color]" id="style_border_active_color" />
@@ -187,7 +187,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_ROUNDED_CORNER_RADIUS', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_ROUNDED_CORNER_RADIUS', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<div class="input-append">
@@ -196,7 +196,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_PADDING_SPACE', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_PADDING_SPACE', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<div class="input-append">
@@ -205,7 +205,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_MARGIN_SPACE', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_MARGIN_SPACE', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<div class="input-append">
@@ -216,7 +216,7 @@ class IGUniformEditForm {
 							</div>
 							<div id="formStyleTitle">
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_TEXT_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_TEXT_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="color" data-type="control-label" value="<?php echo '' . $formStyle->text_color;?>" class="jsn-input-fluid" name="form_style[text_color]" id="style_text_color" />
@@ -227,7 +227,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_FONT_TYPE', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_FONT_TYPE', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<select data-value="font-family" data-type="control-label" name="form_style[font_type]" id="style_font_type">
@@ -244,7 +244,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_FONT_SIZE', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_FONT_SIZE', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<div class="input-append">
@@ -255,7 +255,7 @@ class IGUniformEditForm {
 							</div>
 							<div id="formStyleField">
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BACKGROUND_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BACKGROUND_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="background-color" data-type="field" value="<?php echo '' . $formStyle->field_background_color;?>" class="jsn-input-fluid" name="form_style[field_background_color]" id="style_field_background_color" />
@@ -266,7 +266,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BORDER_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BORDER_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="border-color" data-type="field" value="<?php echo '' . $formStyle->field_border_color;?>" class="jsn-input-fluid" name="form_style[field_border_color]" id="style_field_border_color" />
@@ -277,7 +277,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_SHADOW_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_SHADOW_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="box-shadow" data-type="field" value="<?php echo '' . $formStyle->field_shadow_color;?>" class="jsn-input-fluid" name="form_style[field_shadow_color]" id="style_field_shadow_color" />
@@ -288,7 +288,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_TEXT_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_TEXT_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" data-value="color" data-type="field" value="<?php echo '' . $formStyle->field_text_color;?>" class="jsn-input-fluid" name="form_style[field_text_color]" id="style_field_text_color" />
@@ -302,7 +302,7 @@ class IGUniformEditForm {
 							</div>
 							<div id="formStyleMessageError">
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BACKGROUND_COLOR', IG_UNIFORM_TEXTDOMAIN );?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BACKGROUND_COLOR', IG_CONTACTFORM_TEXTDOMAIN );?></label>
 
 									<div class="controls">
 										<input type="text" value="<?php echo '' . $formStyle->message_error_background_color;?>" class="jsn-input-fluid" name="form_style[message_error_background_color]" id="style_message_error_background_color" />
@@ -313,7 +313,7 @@ class IGUniformEditForm {
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_TEXT_COLOR', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_TEXT_COLOR', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<input type="text" value="<?php echo '' . $formStyle->message_error_text_color;?>" class="jsn-input-fluid" name="form_style[message_error_text_color]" id="style_message_error_text_color" />
@@ -326,13 +326,13 @@ class IGUniformEditForm {
 							</div>
 							<div id="formStyleButtons">
 								<div class="control-group">
-									<label class="control-label"><?php echo '' . __( 'IG_UNIFORM_BUTTON_POSITION', IG_UNIFORM_TEXTDOMAIN )?></label>
+									<label class="control-label"><?php echo '' . __( 'IG_CONTACTFORM_BUTTON_POSITION', IG_CONTACTFORM_TEXTDOMAIN )?></label>
 
 									<div class="controls">
 										<select class="input-large" name="form_style[button_position]" id="button_position">
 											<?php
 											$buttonPosition = ! empty( $formStyle->button_position ) ? $formStyle->button_position : 'btn-toolbar';
-											echo '' . IGUniformHelper::render_options_button_position( $buttonPosition );
+											echo '' . IGContactformHelper::render_options_button_position( $buttonPosition );
 											?>
 										</select>
 									</div>
@@ -344,7 +344,7 @@ class IGUniformEditForm {
 										<select class="input-large ig-select2" name="form_style[button_submit_color]" id="button_submit_color">
 											<?php
 											$buttonSubmitColor = ! empty( $formStyle->button_submit_color ) ? $formStyle->button_submit_color : 'btn btn-primary';
-											echo '' . IGUniformHelper::render_options_button_style( $buttonSubmitColor );
+											echo '' . IGContactformHelper::render_options_button_style( $buttonSubmitColor );
 											?>
 										</select>
 									</div>
@@ -356,7 +356,7 @@ class IGUniformEditForm {
 										<select class="input-large ig-select2" name="form_style[button_reset_color]" id="button_reset_color">
 											<?php
 											$buttonResetColor = ! empty( $formStyle->button_reset_color ) ? $formStyle->button_reset_color : 'btn';
-											echo '' . IGUniformHelper::render_options_button_style( $buttonResetColor );
+											echo '' . IGContactformHelper::render_options_button_style( $buttonResetColor );
 											?>
 										</select>
 									</div>
@@ -368,7 +368,7 @@ class IGUniformEditForm {
 										<select class="input-large ig-select2" name="form_style[button_prev_color]" id="button_prev_color">
 											<?php
 											$buttonPrevColor = ! empty( $formStyle->button_prev_color ) ? $formStyle->button_prev_color : 'btn';
-											echo '' . IGUniformHelper::render_options_button_style( $buttonPrevColor );
+											echo '' . IGContactformHelper::render_options_button_style( $buttonPrevColor );
 											?>
 										</select>
 									</div>
@@ -381,7 +381,7 @@ class IGUniformEditForm {
 										<select class="input-large ig-select2" name="form_style[button_next_color]" id="button_next_color">
 											<?php
 											$buttonNextColor = ! empty( $formStyle->button_next_color ) ? $formStyle->button_next_color : 'btn btn-primary';
-											echo '' . IGUniformHelper::render_options_button_style( $buttonNextColor );
+											echo '' . IGContactformHelper::render_options_button_style( $buttonNextColor );
 											?>
 										</select>
 									</div>
@@ -412,7 +412,7 @@ class IGUniformEditForm {
 		$buttonNextColor = ! empty( $formStyle->button_next_color ) ? $formStyle->button_next_color : 'btn btn-primary';
 		?>
 		<div id="form-design">
-		<?php do_action( 'ig_uniform_form_edit_form_bar', $form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
+		<?php do_action( 'ig_contactform_form_edit_form_bar', $form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
 		<hr />
 		<div class="ig-page">
 			<?php echo '' . $listPage; ?>
@@ -420,11 +420,22 @@ class IGUniformEditForm {
 				<div id="form-container" class="jsn-layout">
 					<div id="page-loading" class="jsn-bgloading">
 						<i class="jsn-icon32 jsn-icon-loading"></i></div>
-					<a class="jsn-add-more" id="ig-add-container" href="javascript:void(0);"><i class="icon-plus"></i>Add Container
+					<a class="jsn-add-more" id="ig-add-container" href="javascript:void(0);"><i class="icon-plus"></i><?php _e( 'IG_CONTACTFORM_ADD_CONTAINER', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 					</a>
 
 					<div class="ui-sortable ig-sortable-disable">
-						
+						<div class="form-captcha ui-state-default jsn-iconbar-trigger">
+							<div class="recaptcha-content" style="text-align:  center;">
+
+								<div class="img-captcha">
+									<span class="label label-important">Captcha is disabled</span><img src="<?php echo '' . get_site_url() . '/wp-content/plugins/ig-contact-form/assets/images/recaptcha_pic.png';?>" data-recaptcha="<?php echo '' . get_site_url() . '/wp-content/plugins/ig-contact-form/assets/images/recaptcha_pic.png';?>" data-securityimages="<?php echo '' . get_site_url() . '/wp-content/plugins/ig-contact-form/assets/images/securitycaptcha_pic.png';?>" />
+								</div>
+								<input type="hidden" id="jform_form_captcha" name="ig_contactform[form_settings][form_captcha]" value="<?php echo '' . ( ! empty( $formSettings->form_captcha ) ? $formSettings->form_captcha : '' );?>">
+							</div>
+							<div class="jsn-iconbar">
+								<a class="element-edit" title="Edit Button Action" onclick="return false;" href="#"><i class="icon-pencil"></i></a>
+							</div>
+						</div>
 						<div class="ui-sortable ig-sortable-disable">
 							<div class="form-actions ui-state-default jsn-iconbar-trigger">
 								<div class="<?php echo '' . $buttonPosition;?>">
@@ -438,13 +449,15 @@ class IGUniformEditForm {
 									<button onclick="return false;" class="<?php echo '' . $buttonPrevColor;?> jsn-form-prev hide"><?php echo '' . $formSettings->form_btn_prev_text ? $formSettings->form_btn_prev_text : 'Prev'; ?></button>
 									<button onclick="return false;" class="<?php echo '' . $buttonNextColor;?> jsn-form-next hide"><?php echo '' . $formSettings->form_btn_next_text ? $formSettings->form_btn_next_text : 'Next'; ?></button>
 
-									<button class="<?php echo '' . $buttonSubmitColor;?> jsn-form-submit hide" onclick="return false;"><?php echo '' . $formSettings->form_btn_submit_text ? $formSettings->form_btn_submit_text : 'Submit'; ?></button>
-									<button class="<?php echo '' . $buttonResetColor;?> jsn-form-reset hide" onclick="return false;"><?php echo '' . $formSettings->form_btn_reset_text ? $formSettings->form_btn_reset_text : 'Reset'; ?></button>
-									<input type="hidden" id="jform_form_btn_next_text" name="ig_uniform[form_settings][form_btn_next_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_next_text ) ? $formSettings->form_btn_next_text : 'Next' );?>">
-									<input type="hidden" id="jform_form_btn_prev_text" name="ig_uniform[form_settings][form_btn_prev_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_prev_text ) ? $formSettings->form_btn_prev_text : 'Prev' );?>">
-									<input type="hidden" id="jform_form_btn_submit_text" name="ig_uniform[form_settings][form_btn_submit_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_submit_text ) ? $formSettings->form_btn_submit_text : 'Submit' );?>">
-									<input type="hidden" id="jform_form_btn_reset_text" name="ig_uniform[form_settings][form_btn_reset_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_reset_text ) ? $formSettings->form_btn_reset_text : 'Reset' );?>">
-									<input type="hidden" id="jform_form_state_btn_reset_text" name="ig_uniform[form_settings][form_state_btn_reset_text]" value="<?php echo '' . ( ! empty( $formSettings->form_state_btn_reset_text ) ? $formSettings->form_state_btn_reset_text : 'No' );?>">
+									<button class="<?php echo '' . $buttonSubmitColor;?> jsn-form-submit hide" onclick="return false;"><?php echo '' . isset( $formSettings->form_btn_submit_text ) && $formSettings->form_btn_submit_text ? $formSettings->form_btn_submit_text : 'Submit'; ?></button>
+									<button class="<?php echo '' . $buttonResetColor;?> jsn-form-reset hide" onclick="return false;"><?php echo '' . isset( $formSettings->form_btn_reset_text ) && $formSettings->form_btn_reset_text ? $formSettings->form_btn_reset_text : 'Reset'; ?></button>
+									<input type="hidden" id="jform_form_btn_next_text" name="ig_contactform[form_settings][form_btn_next_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_next_text ) ? $formSettings->form_btn_next_text : 'Next' );?>">
+									<input type="hidden" id="jform_form_btn_prev_text" name="ig_contactform[form_settings][form_btn_prev_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_prev_text ) ? $formSettings->form_btn_prev_text : 'Prev' );?>">
+									<input type="hidden" id="jform_form_btn_submit_text" name="ig_contactform[form_settings][form_btn_submit_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_submit_text ) ? $formSettings->form_btn_submit_text : 'Submit' );?>">
+									<input type="hidden" id="jform_form_btn_reset_text" name="ig_contactform[form_settings][form_btn_reset_text]" value="<?php echo '' . ( ! empty( $formSettings->form_btn_reset_text ) ? $formSettings->form_btn_reset_text : 'Reset' );?>">
+									<input type="hidden" id="jform_form_state_btn_reset_text" name="ig_contactform[form_settings][form_state_btn_reset_text]" value="<?php echo '' . ( ! empty( $formSettings->form_state_btn_reset_text ) ? $formSettings->form_state_btn_reset_text : 'No' );?>">
+									<input type="hidden" id="recaptcha_publickey_saveform" name="recaptcha_publickey" value="<?php echo IG_CONTACTFORM_CAPTCHA_PUBLICKEY; ?>">
+									<input type="hidden" id="recaptcha_privatekey_saveform" name="recaptcha_privatekey" value="<?php echo IG_CONTACTFORM_CAPTCHA_PRIVATEKEY; ?>">
 								</div>
 								<div class="jsn-iconbar">
 									<a class="element-edit" title="Edit Button Action" onclick="return false;" href="#"><i class="icon-pencil"></i></a>
@@ -455,102 +468,102 @@ class IGUniformEditForm {
 					<?php
 					$titleForm = isset( $_GET[ 'form' ] ) ? $_GET[ 'form' ] : '';
 					$arrayTranslated = array(
-						'IG_UNIFORM_FORM_NEW_PAGE',
-						'IG_UNIFORM_EMAIL_SUBMITTER_TITLE',
-						'IG_UNIFORM_MOVE_UP_CONTAINER',
-						'IG_UNIFORM_EMAIL_ADDRESS_TITLE',
-						'IG_UNIFORM_MOVE_DOWN_CONTAINER',
-						'IG_UNIFORM_ADD_CONTAINER_COLUMN',
-						'IG_UNIFORM_DELETE_CONTAINER',
-						'IG_UNIFORM_DELETE_CONTAINER_COLUMN',
-						'IG_UNIFORM_CONFIRM_DELETE_CONTAINER',
-						'IG_UNIFORM_CONFIRM_DELETE_CONTAINER_COLUMN',
-						'IG_UNIFORM_COLOR_CONFIRM_RESET',
-						'IG_UNIFORM_COLOR_CONFIRM_DELETE',
-						'IG_UNIFORM_COLOR_CONFIRM_EXISTS',
-						'IG_UNIFORM_ALL_FORM_FIELD_ARE_HIDDEN',
-						'IG_UNIFORM_ALL_FORM_FIELD_ARE_DISPLAYED',
-						'IG_UNIFORM_ENABLE_RANGE_SELECTION',
+						'IG_CONTACTFORM_FORM_NEW_PAGE',
+						'IG_CONTACTFORM_EMAIL_SUBMITTER_TITLE',
+						'IG_CONTACTFORM_MOVE_UP_CONTAINER',
+						'IG_CONTACTFORM_EMAIL_ADDRESS_TITLE',
+						'IG_CONTACTFORM_MOVE_DOWN_CONTAINER',
+						'IG_CONTACTFORM_ADD_CONTAINER_COLUMN',
+						'IG_CONTACTFORM_DELETE_CONTAINER',
+						'IG_CONTACTFORM_DELETE_CONTAINER_COLUMN',
+						'IG_CONTACTFORM_CONFIRM_DELETE_CONTAINER',
+						'IG_CONTACTFORM_CONFIRM_DELETE_CONTAINER_COLUMN',
+						'IG_CONTACTFORM_COLOR_CONFIRM_RESET',
+						'IG_CONTACTFORM_COLOR_CONFIRM_DELETE',
+						'IG_CONTACTFORM_COLOR_CONFIRM_EXISTS',
+						'IG_CONTACTFORM_ALL_FORM_FIELD_ARE_HIDDEN',
+						'IG_CONTACTFORM_ALL_FORM_FIELD_ARE_DISPLAYED',
+						'IG_CONTACTFORM_ENABLE_RANGE_SELECTION',
 						'TITLES',
-						'IG_UNIFORM_DATE_HOUR_TEXT',
-						'IG_UNIFORM_DATE_MINUTE_TEXT',
-						'IG_UNIFORM_DATE_CLOSE_TEXT',
-						'IG_UNIFORM_DATE_PREV_TEXT',
-						'IG_UNIFORM_DATE_NEXT_TEXT',
-						'IG_UNIFORM_DATE_CURRENT_TEXT',
-						'IG_UNIFORM_DATE_MONTH_JANUARY',
-						'IG_UNIFORM_DATE_MONTH_FEBRUARY',
-						'IG_UNIFORM_DATE_MONTH_MARCH',
-						'IG_UNIFORM_DATE_MONTH_APRIL',
-						'IG_UNIFORM_DATE_MONTH_MAY',
-						'IG_UNIFORM_DATE_MONTH_JUNE',
-						'IG_UNIFORM_DATE_MONTH_JULY',
-						'IG_UNIFORM_DATE_MONTH_AUGUST',
-						'IG_UNIFORM_DATE_MONTH_SEPTEMBER',
-						'IG_UNIFORM_DATE_MONTH_OCTOBER',
-						'IG_UNIFORM_DATE_MONTH_NOVEMBER',
-						'IG_UNIFORM_DATE_MONTH_DECEMBER',
-						'IG_UNIFORM_DATE_MONTH_JANUARY_SHORT',
-						'IG_UNIFORM_DATE_MONTH_FEBRUARY_SHORT',
-						'IG_UNIFORM_DATE_MONTH_MARCH_SHORT',
-						'IG_UNIFORM_DATE_MONTH_APRIL_SHORT',
-						'IG_UNIFORM_DATE_MONTH_MAY_SHORT',
-						'IG_UNIFORM_DATE_MONTH_JUNE_SHORT',
-						'IG_UNIFORM_DATE_MONTH_JULY_SHORT',
-						'IG_UNIFORM_DATE_MONTH_AUGUST_SHORT',
-						'IG_UNIFORM_DATE_MONTH_SEPTEMBER_SHORT',
-						'IG_UNIFORM_DATE_MONTH_OCTOBER_SHORT',
-						'IG_UNIFORM_DATE_MONTH_NOVEMBER_SHORT',
-						'IG_UNIFORM_DATE_MONTH_DECEMBER_SHORT',
-						'IG_UNIFORM_DATE_DAY_SUNDAY',
-						'IG_UNIFORM_DATE_DAY_MONDAY',
-						'IG_UNIFORM_DATE_DAY_TUESDAY',
-						'IG_UNIFORM_DATE_DAY_WEDNESDAY',
-						'IG_UNIFORM_DATE_DAY_THURSDAY',
-						'IG_UNIFORM_DATE_DAY_FRIDAY',
-						'IG_UNIFORM_DATE_DAY_SATURDAY',
-						'IG_UNIFORM_DATE_DAY_SUNDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_MONDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_TUESDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_WEDNESDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_THURSDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_FRIDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_SATURDAY_SHORT',
-						'IG_UNIFORM_DATE_DAY_SUNDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_MONDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_TUESDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_WEDNESDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_THURSDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_FRIDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_SATURDAY_MIN',
-						'IG_UNIFORM_DATE_DAY_WEEK_HEADER',
-						'IG_UNIFORM__MAIL_SETTINGS',
-						'IG_UNIFORM_SELECT_MENU_ITEM',
-						'IG_UNIFORM_SELECT_ARTICLE',
-						'IG_UNIFORM_FORM_APPEARANCE',
-						'IG_UNIFORM_SELECT',
-						'IG_UNIFORM_SAVE',
-						'IG_UNIFORM_CANCEL',
-						'IG_UNIFORM_ADD_FIELD',
-						'IG_UNIFORM_BUTTON_SAVE',
-						'IG_UNIFORM_BUTTON_CANCEL',
-						'IG_UNIFORM_CONFIRM_CONVERTING_FORM',
-						'IG_UNIFORM_UPGRADE__DITION_TITLE',
-						'IG_UNIFORM_UPGRADE__DITION',
-						'IG_UNIFORM_CONFIRM_SAVE_FORM',
-						'IG_UNIFORM_NO__MAIL',
-						'IG_UNIFORM_NO__MAIL_DES',
-						'IG_UNIFORM_CONFIRM_DELETING_A_FIELD',
-						'IG_UNIFORM_CONFIRM_DELETING_A_FIELD_DES',
-						'IG_UNIFORM_BTN_BACKUP',
-						'IG_UNIFORM_IF_CHECKED_VALUE_DUPLICATION',
-						'IG_UNIFORM__MAIL_SUBMITTER_TITLE',
-						'IG_UNIFORM__MAIL_ADDRESS_TITLE',
-						'IG_UNIFORM_LAUNCHPAD_PLUGIN_SYNTAX',
-						'IG_UNIFORM_LAUNCHPAD_PLUGIN_SYNTAX_DES',
-						'IG_UNIFORM_FORM_LIMIG_FILE_EXTENSIONS',
-						'IG_UNIFORM_FOR_SECURITY_REASONS_FOLLOWING_FILE_EXTENSIONS',
-						'IG_UNIFORM_FORM_LIMIG_FILE_SIZE',
+						'IG_CONTACTFORM_DATE_HOUR_TEXT',
+						'IG_CONTACTFORM_DATE_MINUTE_TEXT',
+						'IG_CONTACTFORM_DATE_CLOSE_TEXT',
+						'IG_CONTACTFORM_DATE_PREV_TEXT',
+						'IG_CONTACTFORM_DATE_NEXT_TEXT',
+						'IG_CONTACTFORM_DATE_CURRENT_TEXT',
+						'IG_CONTACTFORM_DATE_MONTH_JANUARY',
+						'IG_CONTACTFORM_DATE_MONTH_FEBRUARY',
+						'IG_CONTACTFORM_DATE_MONTH_MARCH',
+						'IG_CONTACTFORM_DATE_MONTH_APRIL',
+						'IG_CONTACTFORM_DATE_MONTH_MAY',
+						'IG_CONTACTFORM_DATE_MONTH_JUNE',
+						'IG_CONTACTFORM_DATE_MONTH_JULY',
+						'IG_CONTACTFORM_DATE_MONTH_AUGUST',
+						'IG_CONTACTFORM_DATE_MONTH_SEPTEMBER',
+						'IG_CONTACTFORM_DATE_MONTH_OCTOBER',
+						'IG_CONTACTFORM_DATE_MONTH_NOVEMBER',
+						'IG_CONTACTFORM_DATE_MONTH_DECEMBER',
+						'IG_CONTACTFORM_DATE_MONTH_JANUARY_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_FEBRUARY_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_MARCH_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_APRIL_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_MAY_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_JUNE_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_JULY_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_AUGUST_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_SEPTEMBER_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_OCTOBER_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_NOVEMBER_SHORT',
+						'IG_CONTACTFORM_DATE_MONTH_DECEMBER_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_SUNDAY',
+						'IG_CONTACTFORM_DATE_DAY_MONDAY',
+						'IG_CONTACTFORM_DATE_DAY_TUESDAY',
+						'IG_CONTACTFORM_DATE_DAY_WEDNESDAY',
+						'IG_CONTACTFORM_DATE_DAY_THURSDAY',
+						'IG_CONTACTFORM_DATE_DAY_FRIDAY',
+						'IG_CONTACTFORM_DATE_DAY_SATURDAY',
+						'IG_CONTACTFORM_DATE_DAY_SUNDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_MONDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_TUESDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_WEDNESDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_THURSDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_FRIDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_SATURDAY_SHORT',
+						'IG_CONTACTFORM_DATE_DAY_SUNDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_MONDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_TUESDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_WEDNESDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_THURSDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_FRIDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_SATURDAY_MIN',
+						'IG_CONTACTFORM_DATE_DAY_WEEK_HEADER',
+						'IG_CONTACTFORM__MAIL_SETTINGS',
+						'IG_CONTACTFORM_SELECT_MENU_ITEM',
+						'IG_CONTACTFORM_SELECT_ARTICLE',
+						'IG_CONTACTFORM_FORM_APPEARANCE',
+						'IG_CONTACTFORM_SELECT',
+						'IG_CONTACTFORM_SAVE',
+						'IG_CONTACTFORM_CANCEL',
+						'IG_CONTACTFORM_ADD_FIELD',
+						'IG_CONTACTFORM_BUTTON_SAVE',
+						'IG_CONTACTFORM_BUTTON_CANCEL',
+						'IG_CONTACTFORM_CONFIRM_CONVERTING_FORM',
+						'IG_CONTACTFORM_UPGRADE__DITION_TITLE',
+						'IG_CONTACTFORM_UPGRADE__DITION',
+						'IG_CONTACTFORM_CONFIRM_SAVE_FORM',
+						'IG_CONTACTFORM_NO__MAIL',
+						'IG_CONTACTFORM_NO__MAIL_DES',
+						'IG_CONTACTFORM_CONFIRM_DELETING_A_FIELD',
+						'IG_CONTACTFORM_CONFIRM_DELETING_A_FIELD_DES',
+						'IG_CONTACTFORM_BTN_BACKUP',
+						'IG_CONTACTFORM_IF_CHECKED_VALUE_DUPLICATION',
+						'IG_CONTACTFORM__MAIL_SUBMITTER_TITLE',
+						'IG_CONTACTFORM__MAIL_ADDRESS_TITLE',
+						'IG_CONTACTFORM_LAUNCHPAD_PLUGIN_SYNTAX',
+						'IG_CONTACTFORM_LAUNCHPAD_PLUGIN_SYNTAX_DES',
+						'IG_CONTACTFORM_FORM_LIMIG_FILE_EXTENSIONS',
+						'IG_CONTACTFORM_FOR_SECURITY_REASONS_FOLLOWING_FILE_EXTENSIONS',
+						'IG_CONTACTFORM_FORM_LIMIG_FILE_SIZE',
 						'STREET_ADDRESS',
 						'ADDRESS_LINE_2',
 						'CITY',
@@ -560,21 +573,21 @@ class IGUniformEditForm {
 						'MIDDLE',
 						'LAST',
 						'COUNTRY',
-						'IG_UNIFORM_ALLOW_USER_CHOICE',
-						'IG_UNIFORM_SET_ITEM_PLACEHOLDER',
-						'IG_UNIFORM_SET_ITEM_PLACEHOLDER_DES',
-						'IG_UNIFORM_SHOW_DATE_FORMAT',
-						'IG_UNIFORM_SHOW_TIME_FORMAT',
-						'IG_UNIFORM__NABLE_RANGE_SELECTION',
-						'IG_UNIFORM_YOU_CAN_NOT_HIDE_THE_COPYLINK',
-						'IG_UNIFORM_CUSTOM_DATE_FORMAT',
-						'IG_UNIFORM_UPGRADE_EDITION',
-						'IG_UNIFORM_UPGRADE_EDITION_TITLE',
-						'IG_UNIFORM_YOU_HAVE_REACHED_THE_LIMITATION_OF_1_PAGE_IN_FREE_EDITION',
-						'IG_UNIFORM_YOU_HAVE_REACHED_THE_LIMITATION_OF_10_FIELD_IN_FREE_EDITION',
+						'IG_CONTACTFORM_ALLOW_USER_CHOICE',
+						'IG_CONTACTFORM_SET_ITEM_PLACEHOLDER',
+						'IG_CONTACTFORM_SET_ITEM_PLACEHOLDER_DES',
+						'IG_CONTACTFORM_SHOW_DATE_FORMAT',
+						'IG_CONTACTFORM_SHOW_TIME_FORMAT',
+						'IG_CONTACTFORM__NABLE_RANGE_SELECTION',
+						'IG_CONTACTFORM_YOU_CAN_NOT_HIDE_THE_COPYLINK',
+						'IG_CONTACTFORM_CUSTOM_DATE_FORMAT',
+						'IG_CONTACTFORM_UPGRADE_EDITION',
+						'IG_CONTACTFORM_UPGRADE_EDITION_TITLE',
+						'IG_CONTACTFORM_YOU_HAVE_REACHED_THE_LIMITATION_OF_1_PAGE_IN_FREE_EDITION',
+						'IG_CONTACTFORM_YOU_HAVE_REACHED_THE_LIMITATION_OF_10_FIELD_IN_FREE_EDITION',
 					);
 					$formSubmitter = isset( $items->form_submitter ) ? json_decode( $items->form_submitter ) : '';
-					$languages = IGUniformHelper::get_translated( $arrayTranslated );
+					$languages = IGContactformHelper::get_translated( $arrayTranslated );
 					$fieldFormStyle = $form[ 'ig-form-field-form_style' ];;
 					$fieldFormStyle->get( 'input' );
 					?>
@@ -582,14 +595,14 @@ class IGUniformEditForm {
 					<input type="hidden" name="jform_form_id" id="jform_form_id" value="<?php echo '' . ( ! empty( $items->form_id ) ? $items->form_id : '' );?>" />
 					<input type="hidden" name="jform_form_title" id="jform_form_title" value="<?php echo '' . ( ! empty( $_GET[ 'form' ] ) ? $_GET[ 'form' ] : '' );?>" />
 					<input type="hidden" name="urlAdmin" id="urlAdmin" value="<?php echo '' . get_admin_url();?>" />
-					<input type="hidden" name="urlBase" id="ig_uniform_urlBase" value="<?php echo '' . get_site_url();?>" />
-					<input type="hidden" name="languages" id="ig_uniform_languages" value='<?php echo '' . json_encode( $languages ) . '';?>' />
-					<input type="hidden" id="ig_uniform_formStyle" name="ig_uniform_formStyle" value='<?php echo '' . htmlentities( json_encode( $formStyle ) ); ?>'>
-					<input type="hidden" id="ig_uniform_dataEmailSubmitter" name="ig_uniform_dataEmailSubmitter" value="<?php echo '' . htmlentities( json_encode( $formSubmitter ) ); ?>">
+					<input type="hidden" name="urlBase" id="ig_contactform_urlBase" value="<?php echo '' . get_site_url();?>" />
+					<input type="hidden" name="languages" id="ig_contactform_languages" value='<?php echo '' . json_encode( $languages ) . '';?>' />
+					<input type="hidden" id="ig_contactform_formStyle" name="ig_contactform_formStyle" value='<?php echo '' . htmlentities( json_encode( $formStyle ) ); ?>'>
+					<input type="hidden" id="ig_contactform_dataEmailSubmitter" name="ig_contactform_dataEmailSubmitter" value="<?php echo '' . htmlentities( json_encode( $formSubmitter ) ); ?>">
 				</div>
 			</div>
 		</div>
-		<?php IGUniformHelper::get_footer();?>
+		<?php IGContactformHelper::get_footer();?>
 		</div>
 	<?php
 	}
@@ -602,14 +615,14 @@ class IGUniformEditForm {
 	public function add_container_form_action( $form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage ) {
 		?>
 		<div id="form-action" class="form-horizontal">
-		<?php do_action( 'ig_uniform_form_edit_form_action_position_1',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
+		<?php do_action( 'ig_contactform_form_edit_form_action_position_1',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
 		<div class="row-fluid">
 			<fieldset id="postaction">
 				<legend>
-					<?php echo '' . __( 'IG_UNIFORM_POST_SUBMISSION_ACTION', IG_UNIFORM_TEXTDOMAIN ); ?>
+					<?php echo '' . __( 'IG_CONTACTFORM_POST_SUBMISSION_ACTION', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 				</legend>
 				<div class="control-group">
-					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __( 'IG_UNIFORM_SAVE_SUBMISSIONS_DES', IG_UNIFORM_TEXTDOMAIN ); ?>"><?php echo '' . __( 'IG_UNIFORM_SAVE_SUBMISSIONS', IG_UNIFORM_TEXTDOMAIN ); ?></label>
+					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __( 'IG_CONTACTFORM_SAVE_SUBMISSIONS_DES', IG_CONTACTFORM_TEXTDOMAIN ); ?>"><?php echo '' . __( 'IG_CONTACTFORM_SAVE_SUBMISSIONS', IG_CONTACTFORM_TEXTDOMAIN ); ?></label>
 
 					<div class="controls">
 						<?php
@@ -621,8 +634,8 @@ class IGUniformEditForm {
 
 				<div class="control-group">
 					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __(
-						'IG_UNIFORM_SELECT_THE_ACTION_TO_TAKE_AFTER', IG_UNIFORM_TEXTDOMAIN
-					); ?>"><?php echo '' . __( 'IG_UNIFORM_ALERT_FORM_SUBMITSSION', IG_UNIFORM_TEXTDOMAIN ); ?></label>
+						'IG_CONTACTFORM_SELECT_THE_ACTION_TO_TAKE_AFTER', IG_CONTACTFORM_TEXTDOMAIN
+					); ?>"><?php echo '' . __( 'IG_CONTACTFORM_ALERT_FORM_SUBMITSSION', IG_CONTACTFORM_TEXTDOMAIN ); ?></label>
 
 					<div class="controls">
 						<?php
@@ -639,11 +652,11 @@ class IGUniformEditForm {
 				</div>
 			</fieldset>
 		</div>
-		<?php do_action( 'ig_uniform_form_edit_form_action_position_2',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
+		<?php do_action( 'ig_contactform_form_edit_form_action_position_2',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
 		<div class="row-fluid">
 			<fieldset id="email">
 				<legend>
-					<?php echo '' . __( 'IG_UNIFORM_FORM_EMAIL_NOTIFICATION', IG_UNIFORM_TEXTDOMAIN ); ?>
+					<?php echo '' . __( 'IG_CONTACTFORM_FORM_EMAIL_NOTIFICATION', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 				</legend>
 				<?php
 				$fieldContentEmailSendTo = $form[ 'ig-form-field-content_email_send_to' ];
@@ -656,19 +669,19 @@ class IGUniformEditForm {
 				$fieldListEmailSendToSubmitter->get( 'input' );
 				?>
 				<div class="control-group jsn-items-list-container">
-					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __( 'IG_UNIFORM_SPECIFY_EMAIL_ADDRESS', IG_UNIFORM_TEXTDOMAIN )?>">
-						<?php echo '' . __( 'IG_UNIFORM_SEND_EMAIL_TO', IG_UNIFORM_TEXTDOMAIN );?>
+					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __( 'IG_CONTACTFORM_SPECIFY_EMAIL_ADDRESS', IG_CONTACTFORM_TEXTDOMAIN )?>">
+						<?php echo '' . __( 'IG_CONTACTFORM_SEND_EMAIL_TO', IG_CONTACTFORM_TEXTDOMAIN );?>
 					</label>
 
 					<div class="controls">
 						<button class="btn btn-icon pull-right" data-placement="top" id="btn_email_list" original-title="<?php echo '' . __(
-							'IG_UNIFORM_EMAIL_CONTENT', IG_UNIFORM_TEXTDOMAIN
-						);?>" title="<?php echo '' . __( 'IG_UNIFORM_EMAIL_CONTENT', IG_UNIFORM_TEXTDOMAIN );?>" onclick="return false;">
+							'IG_CONTACTFORM_EMAIL_CONTENT', IG_CONTACTFORM_TEXTDOMAIN
+						);?>" title="<?php echo '' . __( 'IG_CONTACTFORM_EMAIL_CONTENT', IG_CONTACTFORM_TEXTDOMAIN );?>" onclick="return false;">
 							<i class="icon-envelope"></i></button>
 						<div class="email-addresses">
 							<ul id="emailAddresses" class="jsn-items-list ui-sortable"></ul>
 							<a href="#" onclick="return false;" id="show-div-add-email" class="jsn-add-more"><?php echo '' . __(
-								'IG_UNIFORM_ADD_MORE_EMAIL', IG_UNIFORM_TEXTDOMAIN
+								'IG_CONTACTFORM_ADD_MORE_EMAIL', IG_CONTACTFORM_TEXTDOMAIN
 							);?></a>
 
 							<div id="addMoreEmail" class="jsn-form-bar">
@@ -677,10 +690,10 @@ class IGUniformEditForm {
 								</div>
 								<div class="control-group">
 									<button class="btn btn-icon" onclick="return false;" id="add-email" title="<?php echo '' . __(
-										'IG_UNIFORM_BUTTON_SAVE', IG_UNIFORM_TEXTDOMAIN
+										'IG_CONTACTFORM_BUTTON_SAVE', IG_CONTACTFORM_TEXTDOMAIN
 									);?>"><i class="icon-ok"></i></button>
 									<button class="btn btn-icon" onclick="return false;" id="close-email" title="<?php echo '' . __(
-										'IG_UNIFORM_BUTTON_CANCEL', IG_UNIFORM_TEXTDOMAIN
+										'IG_CONTACTFORM_BUTTON_CANCEL', IG_CONTACTFORM_TEXTDOMAIN
 									) ?>"><i class="icon-remove"></i></button>
 								</div>
 								<div class="control-group"></div>
@@ -690,16 +703,16 @@ class IGUniformEditForm {
 				</div>
 				<div class="control-group jsn-items-list-container">
 					<label class="control-label ig-label-des-tipsy" original-title="<?php echo '' . __(
-						'IG_UNIFORM_SELECT_EMAIL_FORM_FIELD', IG_UNIFORM_TEXTDOMAIN
+						'IG_CONTACTFORM_SELECT_EMAIL_FORM_FIELD', IG_CONTACTFORM_TEXTDOMAIN
 					); ?>">
-						<?php echo '' . __( 'IG_UNIFORM_SEND_TO_SUBMITTER', IG_UNIFORM_TEXTDOMAIN ); ?>
+						<?php echo '' . __( 'IG_CONTACTFORM_SEND_TO_SUBMITTER', IG_CONTACTFORM_TEXTDOMAIN ); ?>
 					</label>
 
 					<div class="controls">
 						<button class="btn btn-icon pull-right " id="btn_email_submit" original-title="<?php echo '' . __(
-							'IG_UNIFORM_EMAIL_CONTENT', IG_UNIFORM_TEXTDOMAIN
+							'IG_CONTACTFORM_EMAIL_CONTENT', IG_CONTACTFORM_TEXTDOMAIN
 						); ?>" onclick="return false;" title="<?php echo '' . __(
-							'IG_UNIFORM_EMAIL_CONTENT', IG_UNIFORM_TEXTDOMAIN
+							'IG_CONTACTFORM_EMAIL_CONTENT', IG_CONTACTFORM_TEXTDOMAIN
 						); ?>">
 							<i class="icon-envelope"></i></button>
 						<div class="email-submitters">
@@ -709,8 +722,8 @@ class IGUniformEditForm {
 				</div>
 			</fieldset>
 		</div>
-		<?php do_action( 'ig_uniform_form_edit_form_action_position_3',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
-			<?php IGUniformHelper::get_footer();?>
+		<?php do_action( 'ig_contactform_form_edit_form_action_position_3',$form, $formStyle, $formSettings, $listPage, $listFontType, $items, $formItems, $formPage );?>
+			<?php IGContactformHelper::get_footer();?>
 		</div>
 	<?php
 	}

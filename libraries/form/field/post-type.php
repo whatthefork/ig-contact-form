@@ -3,7 +3,7 @@
  * @version    $Id$
  * @package    IG_Library
  * @author     InnoGears Team <support@innogears.com>
- * @copyright  Copyright (C) 2012 InnoGears.com. All Rights Reserved.
+ * @copyright  Copyright (C) 2014 InnoGears.com. All Rights Reserved.
  * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Websites: http://www.innogears.com
@@ -36,6 +36,15 @@ class IG_Form_Field_Post_Type extends IG_Form_Field {
 	 * @var  array
 	 */
 	protected $choices = array();
+
+	/**
+	 * Additional HTML attributes for input field element.
+	 *
+	 * @var  array
+	 */
+	protected $attributes = array(
+		'class' => 'ig-form-field-post-type',
+	);
 
 	/**
 	 * Constructor.

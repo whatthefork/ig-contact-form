@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------
- # Full Name of IG UniForm
+ # Full Name of IG ContactForm
  # ------------------------------------------------------------------------
  # author    innogears.com Team
  # copyright Copyright (C) 2012 innogears.com. All Rights Reserved.
@@ -23,13 +23,13 @@
         }
         return pos;
     }
-    var JSNUniformEmailSettingsView = function (params) {
+    var JSNContactformEmailSettingsView = function (params) {
         this.params = params;
         this.lang = params.language;
         this.init();
         $("body").addClass("jsn-master");
     }
-    JSNUniformEmailSettingsView.prototype = {
+    JSNContactformEmailSettingsView.prototype = {
         init:function () {
 
             var self = this;
@@ -40,7 +40,7 @@
                 fade:true
             });
             if (parent.jQuery(".jsn-page-settings").length < 1) {
-                // window.location.href = "index.php?option=com_uniform";
+                // window.location.href = "index.php?option=com_contactform";
             }
 
             if ($("#template_notify_to").val() == 1) {
@@ -50,13 +50,13 @@
             }
 
             if ($("#template_notify_to").val() == 0) {
-                $("#jform_template_from").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_FROM_0']);
-                $("#jform_template_reply_to").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_REPLY_TO_0']);
-                $("#jform_template_subject").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_SUBJECT_0']);
+                $("#jform_template_from").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_FROM_0']);
+                $("#jform_template_reply_to").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_REPLY_TO_0']);
+                $("#jform_template_subject").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_SUBJECT_0']);
             } else {
-                $("#jform_template_from").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_FROM_1']);
-                $("#jform_template_reply_to").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_REPLY_TO_1']);
-                $("#jform_template_subject").attr("placeholder", this.lang['IG_UNIFORM_PLACEHOLDER_EMAIL_SUBJECT_1']);
+                $("#jform_template_from").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_FROM_1']);
+                $("#jform_template_reply_to").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_REPLY_TO_1']);
+                $("#jform_template_subject").attr("placeholder", this.lang['IG_CONTACTFORM_PLACEHOLDER_EMAIL_SUBJECT_1']);
             }
             parent.jQuery(" ul.jsn-page-list li.page-items").each(function () {
                 listOptionPage.push([$(this).find("input").attr('data-id'), $(this).find("input").attr('value')]);
@@ -64,8 +64,8 @@
             $.ajax({
                 type:"POST",
                 dataType:'json',
-                // url:"index.php?option=com_uniform&view=form&task=form.loadsessionfield&tmpl=component",
-                url:"admin-ajax.php?action=ig_uniform_load_session_field",
+                // url:"index.php?option=com_contactform&view=form&task=form.loadsessionfield&tmpl=component",
+                url:"admin-ajax.php?action=ig_contactform_load_session_field",
                 data:{
                     form_id:parent.jQuery("#jform_form_id").val(),
                     form_page_name:parent.jQuery("#form-design-header").attr('data-value'),
@@ -178,7 +178,8 @@
                             html:{ visible:true },
                             increaseFontSize:{ visible:true },
                             decreaseFontSize:{ visible:true }
-                        }
+                        },
+                        html:'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body style="margin:0; padding:10px;">INITIAL_CONTENT</body></html>'
                     });
                     if (emailContent) {
                         emailContent = $.evalJSON(emailContent);
@@ -294,7 +295,7 @@
             var self = this;
             var listField = fields;
             if (!fields) {
-                listField = "<li title=\"" + self.lang["IG_UNIFORM_NO_" + type + "_DES"] + "\" class=\"ui-state-default ui-state-disabled\">" + self.lang["IG_UNIFORM_NO_" + type] + "</li>"
+                listField = "<li title=\"" + self.lang["IG_CONTACTFORM_NO_" + type + "_DES"] + "\" class=\"ui-state-default ui-state-disabled\">" + self.lang["IG_CONTACTFORM_NO_" + type] + "</li>"
             }
             var dialog = $("<div/>", {
                 'class':'control-list-fields jsn-bootstrap hide',
@@ -306,7 +307,7 @@
                     "class":"arrow"
                 })).append($("<h3/>", {
                     "class":"popover-title",
-                    "text":this.lang['IG_UNIFORM_SELECT_FIELDS']
+                    "text":this.lang['IG_CONTACTFORM_SELECT_FIELDS']
                 })).append(
                     $("<form/>").append(
                         $("<div/>", {"class":"jsn-elementselector"}).append(
@@ -386,7 +387,7 @@
         }
     }
     var params = {};
-    params.language = $.evalJSON($("#ig_uniform_languages").val());
-    new JSNUniformEmailSettingsView(params);
-    $("html").addClass("ig-uniform-modal");
+    params.language = $.evalJSON($("#ig_contactform_languages").val());
+    new JSNContactformEmailSettingsView(params);
+    $("html").addClass("ig-contactform-modal");
 })(jQuery);

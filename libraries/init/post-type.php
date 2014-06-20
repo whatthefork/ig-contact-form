@@ -1,7 +1,7 @@
 <?php
 /**
  * @version    $Id$
- * @package    IG_UNIFORM_Framework
+ * @package    IG_CONTACTFORM_Framework
  * @author     InnoThemes Team <support@innothemes.com>
  * @copyright  Copyright (C) 2012 InnoThemes.com. All Rights Reserved.
  * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@
 /**
  * Custom post type initialization.
  *
- * @package  IG_UNIFORM_Framework
+ * @package  IG_CONTACTFORM_Framework
  * @since    1.0.0
  */
 class IG_Init_Post_Type {
@@ -42,15 +42,15 @@ class IG_Init_Post_Type {
 	 *     ),
 	 *     'meta_boxes' => array(
 	 *         array(
-	 *             'id' => 'ig_uniform-item_url',
+	 *             'id' => 'ig_contactform-item_url',
 	 *             'title' => __( 'URL', IG_PLGFW_TEXTDOMAIN )
 	 *         ),
 	 *         array(
-	 *             'id' => 'ig_uniform-item_referrer',
+	 *             'id' => 'ig_contactform-item_referrer',
 	 *             'title' => __( 'Referrer', IG_PLGFW_TEXTDOMAIN )
 	 *         ),
 	 *         array(
-	 *             'id' => 'ig_uniform-item_host',
+	 *             'id' => 'ig_contactform-item_host',
 	 *             'title' => __( 'Host', IG_PLGFW_TEXTDOMAIN )
 	 *         )
 	 *     ),
@@ -59,7 +59,7 @@ class IG_Init_Post_Type {
 	 *         'referrer' => __( 'Referrer', IG_PLGFW_TEXTDOMAIN ),
 	 *         'host'     => __( 'Host', IG_PLGFW_TEXTDOMAIN )
 	 *     ),
-	 *     'render_column' => array( 'ig_uniform_Post_Type', 'render_column' ),
+	 *     'render_column' => array( 'ig_contactform_Post_Type', 'render_column' ),
 	 *     'sortable_columns' => true,
 	 *     'main_feed' => true
 	 * );

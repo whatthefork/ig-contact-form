@@ -10,22 +10,26 @@
  */
 
 // Define the absolute path, with trailing slash, of the IT Sample Plugin directory
-define( 'IG_UNIFORM_PATH', plugin_dir_path( __FILE__ ) );
+define( 'IG_CONTACTFORM_PATH', plugin_dir_path( __FILE__ ) );
 
 // Define the URL, including a trailing slash, of the IG Sample Plugin directory
-define( 'IG_UNIFORM_URI', plugin_dir_url( __FILE__ ) );
+define( 'IG_CONTACTFORM_URI', plugin_dir_url( __FILE__ ) );
 
-// Text domain for IG UniForm plugin
-define( 'IG_UNIFORM_TEXTDOMAIN', 'ig-contact-form' );
+define( 'IG_CONTACTFORM_CAPTCHA_PUBLICKEY', get_option( 'ig_contactform_recaptcha_public_key' ) );
+
+define( 'IG_CONTACTFORM_CAPTCHA_PRIVATEKEY', get_option( 'ig_contactform_recaptcha_private_key' ) );
+
+// Text domain for IG ContactForm plugin
+define( 'IG_CONTACTFORM_TEXTDOMAIN', 'ig-contact-form' );
 
 // Define product edition
-define( 'IG_UNIFORM_EDITION', 'FREE' );
+define( 'IG_CONTACTFORM_EDITION', 'FREE' );
 
 // Define product identified name
-define( 'IG_UNIFORM_IDENTIFIED_NAME', 'ig_contact_form' );
+define( 'IG_CONTACTFORM_IDENTIFIED_NAME', 'ig_contact_form' );
 
 // Define product identified name
-define( 'IG_UNIFORM_DEPENDENCY', '' );
+define( 'IG_CONTACTFORM_DEPENDENCY', '' );
 
 // Define product identified name
-define( 'IG_UNIFORM_ADDONS', 'ig_contact_form_addons_profields' );
+define( 'IG_CONTACTFORM_ADDONS', 'ig_contactform_addons_profields' );

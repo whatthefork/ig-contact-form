@@ -1,6 +1,6 @@
 <?php
-if ( ! empty( $_POST[ 'ig_uniform_config' ] ) ) {
-	foreach ( $_POST[ 'ig_uniform_config' ] as $key => $value ) {
+if ( ! empty( $_POST[ 'ig_contactform_config' ] ) ) {
+	foreach ( $_POST[ 'ig_contactform_config' ] as $key => $value ) {
 		if ( get_option( $key ) !== false ) {
 			// The option already exists, so we just update it.
 			update_option( $key, $value );
@@ -13,12 +13,12 @@ if ( ! empty( $_POST[ 'ig_uniform_config' ] ) ) {
 		}
 	}
 }
-$loadBootstrapCss = get_option( 'ig_uniform_load_bootstrap_css', 1 );
+$loadBootstrapCss = get_option( 'ig_contactform_load_bootstrap_css', 1 );
 $checkLoadCssBootstrap = '';
 if ( $loadBootstrapCss != '0' && $loadBootstrapCss != 0 ) {
 	$checkLoadCssBootstrap = 'checked="checked" ';
 }
-$loadBootstrapJs = get_option( 'ig_uniform_load_bootstrap_js', 1 );
+$loadBootstrapJs = get_option( 'ig_contactform_load_bootstrap_js', 1 );
 
 $checkLoadJsBootstrap = '';
 if ( $loadBootstrapJs != '0' && $loadBootstrapJs != 0 ) {
@@ -34,51 +34,51 @@ if ( ! empty( $customer_account ) ) {
 }
 ?>
 <div class="wrap">
-	<h2><?php echo '' . __( 'IG ContactForm Settings', IG_UNIFORM_TEXTDOMAIN );?></h2>
+	<h2><?php echo '' . __( 'IG ContactForm Settings', IG_CONTACTFORM_TEXTDOMAIN );?></h2>
 	<?php if ( ! empty( $_POST ) ) { ?>
 	<div class="updated below-h2" id="message"><p>Settings updated.</p></div>
 	<?php } ?>
-	<form method="POST" id="ig_uniform_settings">
+	<form method="POST" id="ig_contactform_settings">
 		<table class="form-table">
 			<tbody>
 			<tr valign="top">
 				<th scope="row">
-					<label><?php echo '' . __( 'Load Bootstrap Assets', IG_UNIFORM_TEXTDOMAIN );?></label>
+					<label><?php echo '' . __( 'Load Bootstrap Assets', IG_CONTACTFORM_TEXTDOMAIN );?></label>
 				</th>
 				<td>
 					<label class="auto-get-data">
-						<input type="checkbox" <?php echo '' . $checkLoadJsBootstrap;?> value="1" id="ig_uniform_load_bootstrap_js"> <?php echo '' . __( 'JS', IG_UNIFORM_TEXTDOMAIN );?>
-						<input type="hidden" value="<?php echo '' . $loadBootstrapJs;?>" name="ig_uniform_config[ig_uniform_load_bootstrap_js]" id="ig_config_uniform_load_bootstrap_js" />
+						<input type="checkbox" <?php echo '' . $checkLoadJsBootstrap;?> value="1" id="ig_contactform_load_bootstrap_js"> <?php echo '' . __( 'JS', IG_CONTACTFORM_TEXTDOMAIN );?>
+						<input type="hidden" value="<?php echo '' . $loadBootstrapJs;?>" name="ig_contactform_config[ig_contactform_load_bootstrap_js]" id="ig_config_contactform_load_bootstrap_js" />
 					</label>
 					<br>
 					<label class="auto-get-data">
-						<input type="checkbox" <?php echo '' . $checkLoadCssBootstrap;?> value="1" id="ig_uniform_load_bootstrap_css"> <?php echo '' . __( 'CSS', IG_UNIFORM_TEXTDOMAIN );?>
-						<input type="hidden" value="<?php echo '' . $loadBootstrapCss;?>" name="ig_uniform_config[ig_uniform_load_bootstrap_css]" id="ig_config_uniform_load_bootstrap_css" />
+						<input type="checkbox" <?php echo '' . $checkLoadCssBootstrap;?> value="1" id="ig_contactform_load_bootstrap_css"> <?php echo '' . __( 'CSS', IG_CONTACTFORM_TEXTDOMAIN );?>
+						<input type="hidden" value="<?php echo '' . $loadBootstrapCss;?>" name="ig_contactform_config[ig_contactform_load_bootstrap_css]" id="ig_config_contactform_load_bootstrap_css" />
 					</label>
 
-					<p class="description"><?php echo '' . __( 'You should choose NOT to load Bootstrap JS / CSS if your theme or some other plugin installed on your website already loaded it.', IG_UNIFORM_TEXTDOMAIN );?></p>
+					<p class="description"><?php echo '' . __( 'You should choose NOT to load Bootstrap JS / CSS if your theme or some other plugin installed on your website already loaded it.', IG_CONTACTFORM_TEXTDOMAIN );?></p>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><?php echo '' . __( 'InnoGears Customer Account', IG_UNIFORM_TEXTDOMAIN );?></th>
+				<th scope="row"><?php echo '' . __( 'InnoGears Customer Account', IG_CONTACTFORM_TEXTDOMAIN );?></th>
 				<td>
 					<div>
 						<label for="username">
-							<?php echo '' . __( 'Username:', IG_UNIFORM_TEXTDOMAIN );?>
-							<input type="text" autocomplete="off" name="ig_uniform_config[ig_customer_account][username]" id="username" class="input-xlarge" value="<?php echo '' . $username?>">
+							<?php echo '' . __( 'Username:', IG_CONTACTFORM_TEXTDOMAIN );?>
+							<input type="text" autocomplete="off" name="ig_contactform_config[ig_customer_account][username]" id="username" class="input-xlarge" value="<?php echo '' . $username?>">
 						</label>
 						<label for="password">
-							<input type="password" autocomplete="off" name="ig_uniform_config[ig_customer_account][password]" id="password" class="input-xlarge" value="<?php echo '' . $password?>">
+							<input type="password" autocomplete="off" name="ig_contactform_config[ig_customer_account][password]" id="password" class="input-xlarge" value="<?php echo '' . $password?>">
 						</label>
 
 						<p class="description">
-							<?php echo '' . __( 'Insert the customer account you registered on:', IG_UNIFORM_TEXTDOMAIN );?>
-							<a target="_blank" href="http://www.innogears.com">www.innogears.com</a>. <?php echo '' . __( 'This account is only required when you want to update commercial plugins purchased from innogears.com.', IG_UNIFORM_TEXTDOMAIN );?>
+							<?php echo '' . __( 'Insert the customer account you registered on:', IG_CONTACTFORM_TEXTDOMAIN );?>
+							<a target="_blank" href="http://www.innogears.com">www.innogears.com</a>. <?php echo '' . __( 'This account is only required when you want to update commercial plugins purchased from innogears.com.', IG_CONTACTFORM_TEXTDOMAIN );?>
 						</p>
 					</div>
 				</td>
 			</tr>
-			<?php do_action( 'ig_uniform_action_config' );?>
+			<?php do_action( 'ig_contactform_action_config' );?>
 			</tbody>
 		</table>
 		<p class="submit">
@@ -95,7 +95,7 @@ $script = '(function ($) {
         "class":"jsn-modal-indicator",
         "style":"display:block"
     })).addClass("jsn-loading-page");
-    $("#ig_uniform_settings label.auto-get-data input:checkbox").change(function(){
+    $("#ig_contactform_settings label.auto-get-data input:checkbox").change(function(){
 		if($(this).is(":checked")){
 			$(this).parent().find("input:hidden").val(1);
 		}else{

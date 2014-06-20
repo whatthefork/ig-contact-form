@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Uniform action Ajax
+ * Contactform action Ajax
  */
-class IGUniformLoadAjax {
+class IGContactformLoadAjax {
 
 	/**
 	 * Constructor.
@@ -13,15 +13,15 @@ class IGUniformLoadAjax {
 	public function __construct() {
 		// Prepare admin pages
 		if ( defined( 'WP_ADMIN' ) ) {
-			add_action( 'wp_ajax_ig_uniform_save_page', array( &$this, 'ig_uniform_save_page' ) );
-			add_action( 'wp_ajax_ig_uniform_load_session_field', array( &$this, 'ig_uniform_load_session_field' ) );
-			add_action( 'wp_ajax_ig_uniform_load_page', array( &$this, 'ig_uniform_load_page' ) );
-			add_action( 'wp_ajax_ig_uniform_getcountfield', array( &$this, 'ig_uniform_getcountfield' ) );
-			add_action( 'wp_ajax_ig_uniform_hidden_columns', array( &$this, 'ig_uniform_ajax_hidden_columns' ) );
+			add_action( 'wp_ajax_ig_contactform_save_page', array( &$this, 'ig_contactform_save_page' ) );
+			add_action( 'wp_ajax_ig_contactform_load_session_field', array( &$this, 'ig_contactform_load_session_field' ) );
+			add_action( 'wp_ajax_ig_contactform_load_page', array( &$this, 'ig_contactform_load_page' ) );
+			add_action( 'wp_ajax_ig_contactform_getcountfield', array( &$this, 'ig_contactform_getcountfield' ) );
+			add_action( 'wp_ajax_ig_contactform_hidden_columns', array( &$this, 'ig_contactform_ajax_hidden_columns' ) );
 		}
 	}
 
-	function ig_uniform_ajax_hidden_columns() {
+	function ig_contactform_ajax_hidden_columns() {
 		if ( ! empty( $_POST ) ) {
 			$form = ! empty( $_POST[ 'form_id' ] ) ? $_POST[ 'form_id' ] : '';
 			$postColumns = ! empty( $_POST[ 'columns' ] ) ? $_POST[ 'columns' ] : '';
@@ -31,7 +31,7 @@ class IGUniformLoadAjax {
 					wp_die( - 1 );
 				}
 				$columns = array();
-				$getColumns = get_user_option( 'ig_uniform_sb_column', $user->ID );
+				$getColumns = get_user_option( 'ig_cfsb_post_type_column', $user->ID );
 
 				if ( ! empty( $getColumns ) ) {
 					$columns = $getColumns;
@@ -40,7 +40,7 @@ class IGUniformLoadAjax {
 				else {
 					$columns[ $form ] = $postColumns;
 				}
-				update_user_option( $user->ID, 'ig_uniform_sb_column', $columns, true );
+				update_user_option( $user->ID, 'ig_cfsb_post_type_column', $columns, true );
 			}
 		}
 		else if ( ! empty( $_GET ) ) {
@@ -48,7 +48,7 @@ class IGUniformLoadAjax {
 			if ( ! $user = wp_get_current_user() ) {
 				wp_die( - 1 );
 			}
-			$columns = get_user_option( 'ig_uniform_sb_column', $user->ID );
+			$columns = get_user_option( 'ig_cfsb_post_type_column', $user->ID );
 			$data = ! empty( $columns[ $form ] ) ? json_encode( $columns[ $form ] ) : '';
 			echo '' . $data;
 		}
@@ -60,7 +60,7 @@ class IGUniformLoadAjax {
 	 *
 	 * @return void
 	 */
-	public function ig_uniform_save_page() {
+	public function ig_contactform_save_page() {
 		$post = $_POST;
 		$formId = ! empty( $post[ 'form_id' ] ) ? $post[ 'form_id' ] : 0;
 
@@ -118,7 +118,7 @@ class IGUniformLoadAjax {
 	 *
 	 * @return json code
 	 */
-	public function ig_uniform_load_session_field() {
+	public function ig_contactform_load_session_field() {
 		//set $post
 		$post = $_POST;
 		//set form id
@@ -178,7 +178,7 @@ class IGUniformLoadAjax {
 	 *
 	 * @return json code
 	 */
-	public function ig_uniform_load_page() {
+	public function ig_contactform_load_page() {
 		//set $post
 		$post = $_POST;
 		//set form id
@@ -220,7 +220,7 @@ class IGUniformLoadAjax {
 					//set form ID
 					$formId = (int)$post[ 'form_id' ];
 					// set form content
-					$formContent = IGUniformHelper::get_form_content( $formId );
+					$formContent = IGContactformHelper::get_form_content( $formId );
 					if ( ! empty( $formContent ) ) {
 						foreach ( $formContent as $formContent ) {
 							$_SESSION[ 'form-design-' . $formId ][ 'form_page_' . $formContent->page_id ] = $formContent->page_content;
@@ -314,14 +314,14 @@ class IGUniformLoadAjax {
 	 *
 	 * @return  void
 	 */
-	public static function ig_uniform_getcountfield() {
+	public static function ig_contactform_getcountfield() {
 		$post = $_POST;
 		// get Field ID
 		$fieldId = isset( $post[ 'field_id' ] ) ? $post[ 'field_id' ] : 0;
 		// get Form ID
 		$formId = ! empty( $post[ 'form_id' ] ) ? $post[ 'form_id' ] : 0;
 		if ( $formId && $fieldId ) {
-			echo json_encode( JSNUniformHelper::getDataSumbissionByField( $fieldId, $formId ) );
+			echo json_encode( JSNContactformHelper::getDataSumbissionByField( $fieldId, $formId ) );
 		}
 		exit();
 

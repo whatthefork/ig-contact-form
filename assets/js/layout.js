@@ -260,7 +260,7 @@
             $(".jsn-iconbar a.ig-move-up").parent().remove();
             $(".jsn-row-container").each(function (e) {
                 $(this).append(
-                    $("<div/>", {"class":"jsn-iconbar jsn-vertical", "title":self.lang['IG_UNIFORM_ADD_CONTAINER_COLUMN']}).append(
+                    $("<div/>", {"class":"jsn-iconbar jsn-vertical", "title":self.lang['IG_CONTACTFORM_ADD_CONTAINER_COLUMN']}).append(
                         $("<a/>", {"href":"javascript:void(0);", "class":"add-container"}).append(
                             $("<i/>", {"class":"icon-plus"})
                         ).click(function () {
@@ -310,11 +310,11 @@
                                 self.eventContainer();
                             })
                     ).append(
-                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_UNIFORM_DELETE_CONTAINER']}).append(
+                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_CONTACTFORM_DELETE_CONTAINER']}).append(
                             $("<i/>", {"class":"icon-trash"})
                         ).click(function () {
                                 if ($(this).parents(".jsn-row-container").find(".jsn-column-container .jsn-element").length > 0) {
-                                    if (confirm(self.lang['IG_UNIFORM_CONFIRM_DELETE_CONTAINER'])) {
+                                    if (confirm(self.lang['IG_CONTACTFORM_CONFIRM_DELETE_CONTAINER'])) {
                                         $(this).parents(".jsn-row-container").remove();
                                         self.eventContainer();
                                     }
@@ -325,8 +325,8 @@
                             })
                     )
                 ).append(
-                    $("<div/>", {"class":"jsn-iconbar jsn-vertical iconbar-left", "title":self.lang['IG_UNIFORM_ADD_CONTAINER_COLUMN']}).append(
-                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_UNIFORM_MOVE_UP_CONTAINER'], "class":"ig-move-up"}).append(
+                    $("<div/>", {"class":"jsn-iconbar jsn-vertical iconbar-left", "title":self.lang['IG_CONTACTFORM_ADD_CONTAINER_COLUMN']}).append(
+                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_CONTACTFORM_MOVE_UP_CONTAINER'], "class":"ig-move-up"}).append(
                             $("<i/>", {"class":"icon-chevron-up"})
                         ).click(function () {
                                 if (!$(this).hasClass("disabled")) {
@@ -340,7 +340,7 @@
                                 }
                             })
                     ).append(
-                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_UNIFORM_MOVE_DOWN_CONTAINER'], "class":"ig-move-down"}).append(
+                        $("<a/>", {"href":"javascript:void(0);", "title":self.lang['IG_CONTACTFORM_MOVE_DOWN_CONTAINER'], "class":"ig-move-down"}).append(
                             $("<i/>", {"class":" icon-chevron-down"})
                         ).click(function () {
                                 if (!$(this).hasClass("disabled")) {
@@ -391,7 +391,7 @@
                             self.eventContainer();
                         }
                         if ($(this).parents(".jsn-column-container").find(".jsn-element").length > 0) {
-                            if (confirm(self.lang['IG_UNIFORM_CONFIRM_DELETE_CONTAINER_COLUMN'])) {
+                            if (confirm(self.lang['IG_CONTACTFORM_CONFIRM_DELETE_CONTAINER_COLUMN'])) {
                                 actionDelete(selfContainer, $(this));
                             }
                         } else {

@@ -1,12 +1,12 @@
 <?php
 /**
- *  IGUniform generate form helper
+ *  IGContactform generate form helper
  *
  * @package     Joomla.Administrator
- * @subpackage  com_uniform
+ * @subpackage  com_contactform
  * @since       1.6
  */
-class IGUniformGenerateHtmlForm {
+class IGContactformGenerateHtmlForm {
 
 	/**
 	 * Generate html code for a form which includes all the required fields
@@ -21,12 +21,12 @@ class IGUniformGenerateHtmlForm {
 	 */
 	public static function generate( $dataGenrate = null, $dataSumbission = null, $pageContainer = null ) {
 		$formElement = array();
-		load_plugin_textdomain( IG_UNIFORM_TEXTDOMAIN, false, IG_UNIFORM_TEXTDOMAIN . '/frontend/languages/' );
+		load_plugin_textdomain( IG_CONTACTFORM_TEXTDOMAIN, false, IG_CONTACTFORM_TEXTDOMAIN . '/frontend/languages/' );
 		foreach ( $dataGenrate as $data ) {
 			$fileType = preg_replace( '/[^a-z]/i', '', $data->type );
 			$method = "field{$fileType}";
-			$filterClassGenerateForm = array( 'default' => 'IGUniformGenerateHtmlForm' );
-			$filterClassGenerateForm = apply_filters( 'ig_uniform_frontend_class_generate_form', $filterClassGenerateForm );
+			$filterClassGenerateForm = array( 'default' => 'IGContactformGenerateHtmlForm' );
+			$filterClassGenerateForm = apply_filters( 'ig_contactform_frontend_class_generate_form', $filterClassGenerateForm );
 			if ( ! empty( $filterClassGenerateForm ) ) {
 				foreach ( $filterClassGenerateForm as $class ) {
 					if ( method_exists( $class, $method ) ) {
@@ -125,10 +125,10 @@ class IGUniformGenerateHtmlForm {
 		$requiredBlank = ! empty( $data->options->required ) ? 'blank-required' : '';
 		$hideField = ! empty( $data->options->hideField ) ? 'hide' : '';
 		$customClass = ! empty( $data->options->customClass ) ? $data->options->customClass : '';
-		$instruction = ! empty( $data->options->instruction ) ? ' <i original-title="' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign"></i>' : '';
+		$instruction = ! empty( $data->options->instruction ) ? ' <i original-title="' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign"></i>' : '';
 		$sizeInput = ! empty( $data->options->size ) ? $data->options->size : '';
-		$placeholder = ! empty( $data->options->value ) ? __( $data->options->value, IG_UNIFORM_TEXTDOMAIN ) : '';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '"><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><input ' . $limitValue . ' class=" ' . $styleClassLimit . ' ' . $sizeInput . '" id="' . $data->id . '" name="' . $data->id . '" type="text" value="' . htmlentities( $defaultValue, ENT_QUOTES, 'UTF-8' ) . '" placeholder="' . htmlentities( $placeholder, ENT_QUOTES, 'UTF-8' ) . '" /></div></div>';
+		$placeholder = ! empty( $data->options->value ) ? __( $data->options->value, IG_CONTACTFORM_TEXTDOMAIN ) : '';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '"><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><input ' . $limitValue . ' class=" ' . $styleClassLimit . ' ' . $sizeInput . '" id="' . $data->id . '" name="' . $data->id . '" type="text" value="' . htmlentities( $defaultValue, ENT_QUOTES, 'UTF-8' ) . '" placeholder="' . htmlentities( $placeholder, ENT_QUOTES, 'UTF-8' ) . '" /></div></div>';
 		return $html;
 	}
 
@@ -171,9 +171,9 @@ class IGUniformGenerateHtmlForm {
 		$required = ! empty( $data->options->required ) ? ' <span class="required" >*</span > ' : '';
 		$requiredBlank = ! empty( $data->options->required ) ? 'blank-required' : '';
 		$rows = ! empty( $data->options->rows ) && (int)$data->options->rows ? $data->options->rows : '10';
-		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
-		$placeholder = ! empty( $data->options->value ) ? __( $data->options->value, IG_UNIFORM_TEXTDOMAIN ) : '';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '"><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><textarea ' . $limitValue . ' rows="' . $rows . '" class="' . $styleClassLimit . ' ' . $sizeInput . '" id="' . $data->id . '" name="' . $data->id . '" placeholder="' . htmlentities( $placeholder, ENT_QUOTES, 'UTF-8' ) . '">' . $defaultValue . '</textarea></div></div>';
+		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
+		$placeholder = ! empty( $data->options->value ) ? __( $data->options->value, IG_CONTACTFORM_TEXTDOMAIN ) : '';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '"><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><textarea ' . $limitValue . ' rows="' . $rows . '" class="' . $styleClassLimit . ' ' . $sizeInput . '" id="' . $data->id . '" name="' . $data->id . '" placeholder="' . htmlentities( $placeholder, ENT_QUOTES, 'UTF-8' ) . '">' . $defaultValue . '</textarea></div></div>';
 		return $html;
 	}
 
@@ -193,12 +193,12 @@ class IGUniformGenerateHtmlForm {
 		$customClass = ! empty( $data->options->customClass ) ? $data->options->customClass : '';
 		$required = ! empty( $data->options->required ) ? ' <span class="required" >*</span > ' : '';
 		$randomDropdown = ! empty( $data->options->randomize ) ? 'dropdown-randomize' : '';
-		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
+		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
 		$defaultValue = ! empty( $dataSumbission[ $data->id ] ) ? $dataSumbission[ $data->id ] : '';
 		$sizeInput = ! empty( $data->options->size ) ? $data->options->size : '';
 		$dataSettings = ! empty( $data->options->itemAction ) ? $data->options->itemAction : '';
 		$requiredBlank = ! empty( $data->options->firstItemAsPlaceholder ) && ! empty( $data->options->required ) ? 'dropdown-required' : '';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '" data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '"><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><select id="' . $data->id . '" class="dropdown ' . $sizeInput . ' ' . $randomDropdown . '" name="' . $data->id . '">';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . '" data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '"><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><select id="' . $data->id . '" class="dropdown ' . $sizeInput . ' ' . $randomDropdown . '" name="' . $data->id . '">';
 
 		if ( isset( $data->options->items ) && is_array( $data->options->items ) ) {
 			foreach ( $data->options->items as $index => $option ) {
@@ -223,18 +223,18 @@ class IGUniformGenerateHtmlForm {
 					$selectDefault = 'selectdefault="true"';
 				}
 				if ( ! empty( $data->options->firstItemAsPlaceholder ) && $index == 0 ) {
-					$html .= '<option ' . $selected . ' ' . $selectDefault . ' value="">' . htmlentities( __( $option->text, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
+					$html .= '<option ' . $selected . ' ' . $selectDefault . ' value="">' . htmlentities( __( $option->text, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
 				}
 				else {
-					$html .= '<option class="jsn-column-item" ' . $selected . ' ' . $selectDefault . ' value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '">' . htmlentities( __( $option->text, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
+					$html .= '<option class="jsn-column-item" ' . $selected . ' ' . $selectDefault . ' value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '">' . htmlentities( __( $option->text, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
 				}
 			}
 		}
 		$textOthers = ! empty( $data->options->labelOthers ) ? $data->options->labelOthers : 'Others';
 		if ( ! empty( $data->options->allowOther ) ) {
-			$html .= '<option class="lbl-allowOther" value="Others">' . __( $textOthers, IG_UNIFORM_TEXTDOMAIN ) . '</option>';
+			$html .= '<option class="lbl-allowOther" value="Others">' . __( $textOthers, IG_CONTACTFORM_TEXTDOMAIN ) . '</option>';
 			$html .= '</select>';
-			$html .= '<div class="jsn-column-item ig-uniform-others"><textarea class="ig-dropdown-Others hide" name="fieldOthers[' . $data->id . ']"  rows="3"></textarea></div></div>';
+			$html .= '<div class="jsn-column-item ig-contactform-others"><textarea class="ig-dropdown-Others hide" name="fieldOthers[' . $data->id . ']"  rows="3"></textarea></div></div>';
 		}
 		else {
 			$html .= '</select></div>';
@@ -260,11 +260,11 @@ class IGUniformGenerateHtmlForm {
 		$required = ! empty( $data->options->required ) ? ' <span class="required" >*</span > ' : '';
 		$requiredBlank = ! empty( $data->options->required ) ? 'list-required' : '';
 		$randomList = ! empty( $data->options->randomize ) ? 'list-randomize' : '';
-		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
+		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
 		$defaultValue = ! empty( $dataSumbission[ $data->id ] ) ? $dataSumbission[ $data->id ] : '';
 		$sizeInput = ! empty( $data->options->size ) ? $data->options->size : '';
 		$multiple = ! empty( $data->options->multiple ) ? 'multiple' : 'size="4"';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' "><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><select ' . $multiple . ' id="' . $data->id . '" class="list ' . $sizeInput . ' ' . $randomList . '" name="' . $data->id . '[]">';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' "><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredBlank . '"><select ' . $multiple . ' id="' . $data->id . '" class="list ' . $sizeInput . ' ' . $randomList . '" name="' . $data->id . '[]">';
 
 		if ( isset( $data->options->items ) && is_array( $data->options->items ) ) {
 			foreach ( $data->options->items as $option ) {
@@ -284,7 +284,7 @@ class IGUniformGenerateHtmlForm {
 						$selected = '';
 					}
 				}
-				$html .= '<option class="jsn-column-item" ' . $selected . ' value="' . $option->text . '">' . htmlentities( __( $option->text, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
+				$html .= '<option class="jsn-column-item" ' . $selected . ' value="' . $option->text . '">' . htmlentities( __( $option->text, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</option>';
 			}
 		}
 		$html .= '</select></div></div>';
@@ -305,11 +305,11 @@ class IGUniformGenerateHtmlForm {
 		$hideField = ! empty( $data->options->hideField ) ? 'hide' : '';
 		$customClass = ! empty( $data->options->customClass ) ? $data->options->customClass : '';
 		$required = ! empty( $data->options->required ) ? ' <span class="required" >*</span > ' : '';
-		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
+		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
 		$requiredChoices = ! empty( $data->options->required ) ? 'choices-required' : '';
 		$randomChoices = ! empty( $data->options->randomize ) ? 'choices-randomize' : '';
 		$dataSettings = ! empty( $data->options->itemAction ) ? $data->options->itemAction : '';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' " data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '" ><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredChoices . '"><div id="' . $data->id . '" class="choices jsn-columns-container ' . $data->options->layout . ' ' . $randomChoices . '">';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' " data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '" ><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls ' . $requiredChoices . '"><div id="' . $data->id . '" class="choices jsn-columns-container ' . $data->options->layout . ' ' . $randomChoices . '">';
 
 		$defaultValue = isset( $dataSumbission[ $data->id ] ) ? $dataSumbission[ $data->id ] : '';
 		if ( isset( $data->options->items ) && is_array( $data->options->items ) ) {
@@ -330,12 +330,12 @@ class IGUniformGenerateHtmlForm {
 						$checked = '';
 					}
 				}
-				$html .= '<div class="jsn-column-item"><label class="radio"><input ' . $checked . ' name="' . $data->id . '" value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '" type="radio" />' . htmlentities( __( $option->text, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label></div>';
+				$html .= '<div class="jsn-column-item"><label class="radio"><input ' . $checked . ' name="' . $data->id . '" value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '" type="radio" />' . htmlentities( __( $option->text, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label></div>';
 			}
 		}
 		$textOthers = ! empty( $data->options->labelOthers ) ? $data->options->labelOthers : 'Others';
 		if ( ! empty( $data->options->allowOther ) ) {
-			$html .= '<div class="jsn-column-item ig-uniform-others"><label class="radio lbl-allowOther"><input class="allowOther" name="' . $data->id . '" value="Others" type="radio" />' . htmlentities( __( $textOthers, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label>';
+			$html .= '<div class="jsn-column-item ig-contactform-others"><label class="radio lbl-allowOther"><input class="allowOther" name="' . $data->id . '" value="Others" type="radio" />' . htmlentities( __( $textOthers, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label>';
 			$html .= '<textarea disabled="true" class="ig-value-Others" name="fieldOthers[' . $data->id . ']" rows="3"></textarea></div>';
 		}
 		$html .= '<div class="clearbreak"></div></div></div></div>';
@@ -358,11 +358,11 @@ class IGUniformGenerateHtmlForm {
 		$hideField = ! empty( $data->options->hideField ) ? 'hide' : '';
 		$customClass = ! empty( $data->options->customClass ) ? $data->options->customClass : '';
 		$required = ! empty( $data->options->required ) ? ' <span class="required" >*</span > ' : '';
-		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
+		$instruction = $instruction = ! empty( $data->options->instruction ) ? ' <i original-title = "' . htmlentities( __( $data->options->instruction, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="icon-question-sign" ></i > ' : '';
 		$requiredCheckbox = ! empty( $data->options->required ) ? 'checkbox-required' : '';
 		$randomCheckbox = ! empty( $data->options->randomize ) ? 'checkbox-randomize' : '';
 		$dataSettings = ! empty( $data->options->itemAction ) ? $data->options->itemAction : '';
-		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' " data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '"><label for="' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls"><div id="' . $data->id . '" class="checkboxes jsn-columns-container ' . $data->options->layout . ' ' . $randomCheckbox . ' ' . $requiredCheckbox . '">';
+		$html = '<div class="control-group ' . $customClass . ' ' . $identify . ' ' . $hideField . ' " data-settings="' . htmlentities( $dataSettings, ENT_QUOTES, 'UTF-8' ) . '"><label for="' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '" class="control-label">' . htmlentities( __( $data->options->label, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . $required . $instruction . '</label><div class="controls"><div id="' . $data->id . '" class="checkboxes jsn-columns-container ' . $data->options->layout . ' ' . $randomCheckbox . ' ' . $requiredCheckbox . '">';
 		$defaultValue = isset( $dataSumbission[ $data->id ] ) ? $dataSumbission[ $data->id ] : '';
 		if ( isset( $data->options->items ) && is_array( $data->options->items ) ) {
 			foreach ( $data->options->items as $i => $option ) {
@@ -378,12 +378,12 @@ class IGUniformGenerateHtmlForm {
 					}
 				}
 
-				$html .= '<div class="jsn-column-item"><label class="checkbox"><input ' . $checked . ' name="' . $data->id . '[]" value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '" type="checkbox" />' . htmlentities( __( $option->text, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label></div>';
+				$html .= '<div class="jsn-column-item"><label class="checkbox"><input ' . $checked . ' name="' . $data->id . '[]" value="' . htmlentities( $option->text, ENT_QUOTES, 'UTF-8' ) . '" type="checkbox" />' . htmlentities( __( $option->text, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label></div>';
 			}
 		}
 		$textOthers = ! empty( $data->options->labelOthers ) ? $data->options->labelOthers : 'Others';
 		if ( ! empty( $data->options->allowOther ) ) {
-			$html .= '<div class="jsn-column-item ig-uniform-others"><label class="checkbox lbl-allowOther"><input class="allowOther" value="Others" type="checkbox" />' . htmlentities( __( $textOthers, IG_UNIFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label>';
+			$html .= '<div class="jsn-column-item ig-contactform-others"><label class="checkbox lbl-allowOther"><input class="allowOther" value="Others" type="checkbox" />' . htmlentities( __( $textOthers, IG_CONTACTFORM_TEXTDOMAIN ), ENT_QUOTES, 'UTF-8' ) . '</label>';
 			$html .= '<textarea disabled="true" class="ig-value-Others" name="' . $data->id . '[]"  rows="3"></textarea></div>';
 		}
 		$html .= '<div class="clearbreak"></div></div></div></div>';
@@ -406,7 +406,7 @@ class IGUniformGenerateHtmlForm {
 		$identify = ! empty( $data->identify ) ? $data->identify : '';
 		$hideField = ! empty( $data->options->hideField ) ? 'hide' : '';
 		$customClass = ! empty( $data->options->customClass ) ? $data->options->customClass : '';
-		$value = isset( $data->options->value ) ? __( $data->options->value, IG_UNIFORM_TEXTDOMAIN ) : '';
+		$value = isset( $data->options->value ) ? __( $data->options->value, IG_CONTACTFORM_TEXTDOMAIN ) : '';
 		$html = "<div class=\"control-group {$customClass} {$identify} {$hideField} \"><div class=\"controls clearfix\">{$value}</div></div>";
 		return $html;
 	}

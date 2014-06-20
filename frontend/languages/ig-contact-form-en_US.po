@@ -1,126 +1,126 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: IG Uniform\n"
+"Project-Id-Version: IG ContactForm\n"
 "POT-Creation-Date: 2013-10-28 10:39+0700\n"
-"PO-Revision-Date: 2014-02-26 09:37+0700\n"
+"PO-Revision-Date: 2014-06-05 10:58+0700\n"
 "Last-Translator: \n"
 "Language-Team: Innogears Team <support@innogears.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgid "IG_UNIFORM_SHOW_SUBMISSION_DATA_DETAIL_DES"
+msgid "IG_CONTACTFORM_SHOW_SUBMISSION_DATA_DETAIL_DES"
 msgstr "Show Submission Data Detail"
 
-msgid "IG_UNIFORM_POWERED_BY"
+msgid "IG_CONTACTFORM_POWERED_BY"
 msgstr "Joomla forms builder"
 
-msgid "IG_UNIFORM_BUTTON_SAVE"
+msgid "IG_CONTACTFORM_BUTTON_SAVE"
 msgstr "Submit"
 
-msgid "IG_UNIFORM_BUTTON_RESET"
+msgid "IG_CONTACTFORM_BUTTON_RESET"
 msgstr "Reset"
 
-msgid "IG_UNIFORM_BUTTON_PREVIOUS"
+msgid "IG_CONTACTFORM_BUTTON_PREVIOUS"
 msgstr "Previous"
 
-msgid "IG_UNIFORM_BUTTON_BACK"
+msgid "IG_CONTACTFORM_BUTTON_BACK"
 msgstr "Back"
 
-msgid "IG_UNIFORM_BUTTON_NEXT"
+msgid "IG_CONTACTFORM_BUTTON_NEXT"
 msgstr "Next"
 
-msgid "IG_UNIFORM_FIELD_REQUIRED"
+msgid "IG_CONTACTFORM_FIELD_REQUIRED"
 msgstr "Field required"
 
-msgid "IG_UNIFORM_FIELD_EXISTING"
+msgid "IG_CONTACTFORM_FIELD_EXISTING"
 msgstr "Someone already has that '%s'"
 
-msgid "IG_UNIFORM_FIELD_EMAIL"
+msgid "IG_CONTACTFORM_FIELD_EMAIL"
 msgstr "The value %s is not valid"
 
-msgid "IG_UNIFORM_FIELD_WEBSITE"
+msgid "IG_CONTACTFORM_FIELD_WEBSITE"
 msgstr "The value %s is not valid"
 
-msgid "IG_UNIFORM_VIEW_FORM "
+msgid "IG_CONTACTFORM_VIEW_FORM "
 msgstr "IG ContactForm - View Form"
 
 msgid "IG_UNIFROM_SELECT_FORM"
 msgstr "Select Form"
 
-msgid "IG_UNIFORM_ERROR_WARNFILETYPE"
+msgid "IG_CONTACTFORM_ERROR_WARNFILETYPE"
 msgstr "This file type '%s' is not supported."
 
-msgid "IG_UNIFORM_ERROR_WARNFILETOOLARGE"
+msgid "IG_CONTACTFORM_ERROR_WARNFILETOOLARGE"
 msgstr "This file is too large to upload."
 
-msgid "IG_UNIFORM_ERROR_UNABLE_TO_UPLOAD_FILE"
+msgid "IG_CONTACTFORM_ERROR_UNABLE_TO_UPLOAD_FILE"
 msgstr "Unable to upload file."
 
-msgid "IG_UNIFORM_ERROR_UPLOAD_INPUT"
+msgid "IG_CONTACTFORM_ERROR_UPLOAD_INPUT"
 msgstr "Please input a file for upload"
 
-msgid "IG_UNIFORM_ERROR_FIELD_INTEGER"
+msgid "IG_CONTACTFORM_ERROR_FIELD_INTEGER"
 msgstr "The value %s is not integer"
 
-msgid "IG_UNIFORM_EMAIL_THANKS"
+msgid "IG_CONTACTFORM_EMAIL_THANKS"
 msgstr "Thank you for your email."
 
-msgid "IG_UNIFORM_ERROR_CAPTCHA"
+msgid "IG_CONTACTFORM_ERROR_CAPTCHA"
 msgstr "Incorrect captcha text!"
 
-msgid "COM_UNIFORM"
+msgid "COM_CONTACTFORM"
 msgstr "IG ContactForm"
 
-msgid "IG_UNIFORM_SELECT_FORM_DES"
+msgid "IG_CONTACTFORM_SELECT_FORM_DES"
 msgstr "IG ContactForm - Select Form"
 
-msgid "IG_UNIFORM_BUTTON_SUBMIT"
+msgid "IG_CONTACTFORM_BUTTON_SUBMIT"
 msgstr "Submit"
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_CANNOT_EMPTY"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_CANNOT_EMPTY"
 msgstr "This field can not be empty, please enter required information."
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_INVALID"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_INVALID"
 msgstr "The information is invalid, please correct."
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_MAX_LENGTH"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_MAX_LENGTH"
 msgstr "The information cannot contain more than"
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_MIN_LENGTH"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_MIN_LENGTH"
 msgstr "The information cannot contain less than"
 
-msgid "IG_UNIFORM_POST_MAX_SIZE"
+msgid "IG_CONTACTFORM_POST_MAX_SIZE"
 msgstr ""
 "The file you want to upload is too big. Please keep file size under %s MB"
 
-msgid "IG_UNIFORM_POST_UPLOAD_SIZE"
+msgid "IG_CONTACTFORM_POST_UPLOAD_SIZE"
 msgstr "The file you want to upload is too big. Please keep file size under %s"
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_MAX_NUMBER"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_MAX_NUMBER"
 msgstr "The number cannot be greater than"
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_MIN_NUMBER"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_MIN_NUMBER"
 msgstr "The number cannot be less than"
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_EMAIL_CONFIRM"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_EMAIL_CONFIRM"
 msgstr "Both email addresses must be the same."
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_CONFIRM"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_CONFIRM"
 msgstr "Both %s addresses must be the same."
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_PASSWORD_CONFIRM"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_PASSWORD_CONFIRM"
 msgstr "Both password must be the same."
 
-msgid "IG_UNIFORM_CONFIRM_FIELD_PASSWORD_MIN_MAX_CHARACTER"
+msgid "IG_CONTACTFORM_CONFIRM_FIELD_PASSWORD_MIN_MAX_CHARACTER"
 msgstr "The password must contain minimum %mi% and maximum %mx% character(s)"
 
-msgid "IG_UNIFORM_FIELD_PASSWORD"
+msgid "IG_CONTACTFORM_FIELD_PASSWORD"
 msgstr "The value %s is not valid"
 
 msgid "STREET_ADDRESS"
@@ -150,275 +150,275 @@ msgstr "Last"
 msgid "OTHERS"
 msgstr "Others"
 
-msgid "IG_UNIFORM_CAPTCHA"
+msgid "IG_CONTACTFORM_CAPTCHA"
 msgstr "Captcha"
 
-msgid "IG_UNIFORM_SUBMISSIONS_DETAIL"
+msgid "IG_CONTACTFORM_SUBMISSIONS_DETAIL"
 msgstr "IG ContactForm: Submission Settings"
 
-msgid "IG_UNIFORM_SUBMISSION_COUNTRY"
+msgid "IG_CONTACTFORM_SUBMISSION_COUNTRY"
 msgstr "Country"
 
-msgid "IG_UNIFORM_SUBMISSION_BROWSER"
+msgid "IG_CONTACTFORM_SUBMISSION_BROWSER"
 msgstr "Browser"
 
-msgid "IG_UNIFORM_SUBMISSION_OS"
+msgid "IG_CONTACTFORM_SUBMISSION_OS"
 msgstr "Operating System"
 
-msgid "IG_UNIFORM_SUBMISSION_CREATED_BY"
+msgid "IG_CONTACTFORM_SUBMISSION_CREATED_BY"
 msgstr "Created By"
 
-msgid "IG_UNIFORM_SUBMISSION_CREATED_AT"
+msgid "IG_CONTACTFORM_SUBMISSION_CREATED_AT"
 msgstr "Date Created"
 
-msgid "IG_UNIFORM_DATE"
+msgid "IG_CONTACTFORM_DATE"
 msgstr "Date"
 
-msgid "IG_UNIFORM_DATE_SUBMISSION"
+msgid "IG_CONTACTFORM_DATE_SUBMISSION"
 msgstr "Select date submission"
 
-msgid "IG_UNIFORM_FORM_SEARCH_IN_DATE_SUBMISSION"
+msgid "IG_CONTACTFORM_FORM_SEARCH_IN_DATE_SUBMISSION"
 msgstr "Search in date sunbmission"
 
-msgid "IG_UNIFORM_SUBMISSION_DATA"
+msgid "IG_CONTACTFORM_SUBMISSION_DATA"
 msgstr "Submission data"
 
-msgid "IG_UNIFORM_SUBMISSION_DETAIL"
+msgid "IG_CONTACTFORM_SUBMISSION_DETAIL"
 msgstr "Submission details"
 
-msgid "IG_UNIFORM_PRINT"
+msgid "IG_CONTACTFORM_PRINT"
 msgstr "Print"
 
-msgid "IG_UNIFORM_FORM_CREATED"
+msgid "IG_CONTACTFORM_FORM_CREATED"
 msgstr "Created By"
 
-msgid "IG_UNIFORM_FORM_CREATED_AT"
+msgid "IG_CONTACTFORM_FORM_CREATED_AT"
 msgstr "Date Created"
 
-msgid "IG_UNIFORM_FORM_LAST_SUBMITTED_AT"
+msgid "IG_CONTACTFORM_FORM_LAST_SUBMITTED_AT"
 msgstr "Last Submitted"
 
-msgid "IG_UNIFORM_FORM_SUBMISSION"
+msgid "IG_CONTACTFORM_FORM_SUBMISSION"
 msgstr "Submissions"
 
-msgid "IG_UNIFORM_SUBMISSION_IP"
+msgid "IG_CONTACTFORM_SUBMISSION_IP"
 msgstr "IP Address"
 
-msgid "IG_UNIFORM_SUBMISSION_STATE"
+msgid "IG_CONTACTFORM_SUBMISSION_STATE"
 msgstr "State"
 
-msgid "IG_UNIFORM_SUBMISSIONS_SELECT_FORM"
+msgid "IG_CONTACTFORM_SUBMISSIONS_SELECT_FORM"
 msgstr "Please select the form to get submissions of:"
 
-msgid "IG_UNIFORM_SUBMISSIONS_MANAGER"
+msgid "IG_CONTACTFORM_SUBMISSIONS_MANAGER"
 msgstr "IG ContactForm: Submissions Manager"
 
-msgid "IG_UNIFORM_SELECT_FIELDS"
+msgid "IG_CONTACTFORM_SELECT_FIELDS"
 msgstr "Select Fields"
 
-msgid "IG_UNIFORM_FORM_SEARCH_IN_TITLE"
+msgid "IG_CONTACTFORM_FORM_SEARCH_IN_TITLE"
 msgstr "Search in title"
 
-msgid "IG_UNIFORM_PLACEHOLDER_SELECT_DATE"
+msgid "IG_CONTACTFORM_PLACEHOLDER_SELECT_DATE"
 msgstr "Select Date"
 
-msgid "IG_UNIFORM_SUBMISSION_ID"
+msgid "IG_CONTACTFORM_SUBMISSION_ID"
 msgstr "ID"
 
-msgid "IG_UNIFORM_FORMS"
+msgid "IG_CONTACTFORM_FORMS"
 msgstr "Form"
 
 msgid "JTOOLBAR_EDIT"
 msgstr "Edit"
 
-msgid "IG_UNIFORM_DONE"
+msgid "IG_CONTACTFORM_DONE"
 msgstr "Done"
 
-msgid "IG_UNIFORM_SAVE"
+msgid "IG_CONTACTFORM_SAVE"
 msgstr "Save"
 
-msgid "IG_UNIFORM_SAVE_CLOSE"
+msgid "IG_CONTACTFORM_SAVE_CLOSE"
 msgstr "Save & Close"
 
-msgid "IG_UNIFORM_CLOSE"
+msgid "IG_CONTACTFORM_CLOSE"
 msgstr "Close"
 
-msgid "IG_UNIFORM_DATA_PRESENTATION"
+msgid "IG_CONTACTFORM_DATA_PRESENTATION"
 msgstr "Data Presentation"
 
-msgid "IG_UNIFORM_TYPE_SINGLE_PAGE"
+msgid "IG_CONTACTFORM_TYPE_SINGLE_PAGE"
 msgstr "Single page"
 
-msgid "IG_UNIFORM_TYPE_MULTIPLE_PAGES"
+msgid "IG_CONTACTFORM_TYPE_MULTIPLE_PAGES"
 msgstr "Multiple pages"
 
-msgid "IG_UNIFORM_NO_DATA"
+msgid "IG_CONTACTFORM_NO_DATA"
 msgstr "No data"
 
-msgid "IG_UNIFORM_CANCEL"
+msgid "IG_CONTACTFORM_CANCEL"
 msgstr "Cancel"
 
-msgid "IG_UNIFORM_NEXT_SUBMISSION"
+msgid "IG_CONTACTFORM_NEXT_SUBMISSION"
 msgstr "Next Submission"
 
-msgid "IG_UNIFORM_PREVIOUS_SUBMISSION"
+msgid "IG_CONTACTFORM_PREVIOUS_SUBMISSION"
 msgstr "Previous Submission"
 
-msgid "IG_UNIFORM_SAVE_NEXT"
+msgid "IG_CONTACTFORM_SAVE_NEXT"
 msgstr "Save & Next"
 
-msgid "IG_UNIFORM_DATE_HOUR_TEXT"
+msgid "IG_CONTACTFORM_DATE_HOUR_TEXT"
 msgstr "Hour"
 
-msgid "IG_UNIFORM_DATE_MINUTE_TEXT"
+msgid "IG_CONTACTFORM_DATE_MINUTE_TEXT"
 msgstr "Minute"
 
-msgid "IG_UNIFORM_DATE_CLOSE_TEXT"
+msgid "IG_CONTACTFORM_DATE_CLOSE_TEXT"
 msgstr "Close"
 
-msgid "IG_UNIFORM_DATE_PREV_TEXT"
+msgid "IG_CONTACTFORM_DATE_PREV_TEXT"
 msgstr "Prev"
 
-msgid "IG_UNIFORM_DATE_NEXT_TEXT"
+msgid "IG_CONTACTFORM_DATE_NEXT_TEXT"
 msgstr "Next"
 
-msgid "IG_UNIFORM_DATE_CURRENT_TEXT"
+msgid "IG_CONTACTFORM_DATE_CURRENT_TEXT"
 msgstr "Today"
 
-msgid "IG_UNIFORM_DATE_MONTH_JANUARY"
+msgid "IG_CONTACTFORM_DATE_MONTH_JANUARY"
 msgstr "January"
 
-msgid "IG_UNIFORM_DATE_MONTH_FEBRUARY"
+msgid "IG_CONTACTFORM_DATE_MONTH_FEBRUARY"
 msgstr "February"
 
-msgid "IG_UNIFORM_DATE_MONTH_MARCH"
+msgid "IG_CONTACTFORM_DATE_MONTH_MARCH"
 msgstr "March"
 
-msgid "IG_UNIFORM_DATE_MONTH_APRIL"
+msgid "IG_CONTACTFORM_DATE_MONTH_APRIL"
 msgstr "April"
 
-msgid "IG_UNIFORM_DATE_MONTH_MAY"
+msgid "IG_CONTACTFORM_DATE_MONTH_MAY"
 msgstr "May"
 
-msgid "IG_UNIFORM_DATE_MONTH_JUNE"
+msgid "IG_CONTACTFORM_DATE_MONTH_JUNE"
 msgstr "June"
 
-msgid "IG_UNIFORM_DATE_MONTH_JULY"
+msgid "IG_CONTACTFORM_DATE_MONTH_JULY"
 msgstr "July"
 
-msgid "IG_UNIFORM_DATE_MONTH_AUGUST"
+msgid "IG_CONTACTFORM_DATE_MONTH_AUGUST"
 msgstr "August"
 
-msgid "IG_UNIFORM_DATE_MONTH_SEPTEMBER"
+msgid "IG_CONTACTFORM_DATE_MONTH_SEPTEMBER"
 msgstr "September"
 
-msgid "IG_UNIFORM_DATE_MONTH_OCTOBER"
+msgid "IG_CONTACTFORM_DATE_MONTH_OCTOBER"
 msgstr "October"
 
-msgid "IG_UNIFORM_DATE_MONTH_NOVEMBER"
+msgid "IG_CONTACTFORM_DATE_MONTH_NOVEMBER"
 msgstr "November"
 
-msgid "IG_UNIFORM_DATE_MONTH_DECEMBER"
+msgid "IG_CONTACTFORM_DATE_MONTH_DECEMBER"
 msgstr "December"
 
-msgid "IG_UNIFORM_DATE_MONTH_JANUARY_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_JANUARY_SHORT"
 msgstr "Jan"
 
-msgid "IG_UNIFORM_DATE_MONTH_FEBRUARY_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_FEBRUARY_SHORT"
 msgstr "Feb"
 
-msgid "IG_UNIFORM_DATE_MONTH_MARCH_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_MARCH_SHORT"
 msgstr "Mar"
 
-msgid "IG_UNIFORM_DATE_MONTH_APRIL_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_APRIL_SHORT"
 msgstr "Apr"
 
-msgid "IG_UNIFORM_DATE_MONTH_MAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_MAY_SHORT"
 msgstr "May"
 
-msgid "IG_UNIFORM_DATE_MONTH_JUNE_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_JUNE_SHORT"
 msgstr "Jun"
 
-msgid "IG_UNIFORM_DATE_MONTH_JULY_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_JULY_SHORT"
 msgstr "Jul"
 
-msgid "IG_UNIFORM_DATE_MONTH_AUGUST_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_AUGUST_SHORT"
 msgstr "Aug"
 
-msgid "IG_UNIFORM_DATE_MONTH_SEPTEMBER_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_SEPTEMBER_SHORT"
 msgstr "Sep"
 
-msgid "IG_UNIFORM_DATE_MONTH_OCTOBER_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_OCTOBER_SHORT"
 msgstr "Oct"
 
-msgid "IG_UNIFORM_DATE_MONTH_NOVEMBER_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_NOVEMBER_SHORT"
 msgstr "Nov"
 
-msgid "IG_UNIFORM_DATE_MONTH_DECEMBER_SHORT"
+msgid "IG_CONTACTFORM_DATE_MONTH_DECEMBER_SHORT"
 msgstr "Dec"
 
-msgid "IG_UNIFORM_DATE_DAY_SUNDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_SUNDAY"
 msgstr "Sunday"
 
-msgid "IG_UNIFORM_DATE_DAY_MONDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_MONDAY"
 msgstr "Monday"
 
-msgid "IG_UNIFORM_DATE_DAY_TUESDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_TUESDAY"
 msgstr "Tuesday"
 
-msgid "IG_UNIFORM_DATE_DAY_WEDNESDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_WEDNESDAY"
 msgstr "Wednesday"
 
-msgid "IG_UNIFORM_DATE_DAY_THURSDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_THURSDAY"
 msgstr "Thursday"
 
-msgid "IG_UNIFORM_DATE_DAY_FRIDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_FRIDAY"
 msgstr "Friday"
 
-msgid "IG_UNIFORM_DATE_DAY_SATURDAY"
+msgid "IG_CONTACTFORM_DATE_DAY_SATURDAY"
 msgstr "Saturday"
 
-msgid "IG_UNIFORM_DATE_DAY_SUNDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_SUNDAY_SHORT"
 msgstr "Sun"
 
-msgid "IG_UNIFORM_DATE_DAY_MONDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_MONDAY_SHORT"
 msgstr "Mon"
 
-msgid "IG_UNIFORM_DATE_DAY_TUESDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_TUESDAY_SHORT"
 msgstr "Tue"
 
-msgid "IG_UNIFORM_DATE_DAY_WEDNESDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_WEDNESDAY_SHORT"
 msgstr "Wed"
 
-msgid "IG_UNIFORM_DATE_DAY_THURSDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_THURSDAY_SHORT"
 msgstr "Thu"
 
-msgid "IG_UNIFORM_DATE_DAY_FRIDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_FRIDAY_SHORT"
 msgstr "Fri"
 
-msgid "IG_UNIFORM_DATE_DAY_SATURDAY_SHORT"
+msgid "IG_CONTACTFORM_DATE_DAY_SATURDAY_SHORT"
 msgstr "Sat"
 
-msgid "IG_UNIFORM_DATE_DAY_SUNDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_SUNDAY_MIN"
 msgstr "Su"
 
-msgid "IG_UNIFORM_DATE_DAY_MONDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_MONDAY_MIN"
 msgstr "Mo"
 
-msgid "IG_UNIFORM_DATE_DAY_TUESDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_TUESDAY_MIN"
 msgstr "Tu"
 
-msgid "IG_UNIFORM_DATE_DAY_WEDNESDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_WEDNESDAY_MIN"
 msgstr "We"
 
-msgid "IG_UNIFORM_DATE_DAY_THURSDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_THURSDAY_MIN"
 msgstr "Th"
 
-msgid "IG_UNIFORM_DATE_DAY_FRIDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_FRIDAY_MIN"
 msgstr "Fr"
 
-msgid "IG_UNIFORM_DATE_DAY_SATURDAY_MIN"
+msgid "IG_CONTACTFORM_DATE_DAY_SATURDAY_MIN"
 msgstr "Sa"
 
-msgid "IG_UNIFORM_DATE_DAY_WEEK_HEADER"
+msgid "IG_CONTACTFORM_DATE_DAY_WEEK_HEADER"
 msgstr "Wk"

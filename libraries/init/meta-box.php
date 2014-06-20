@@ -1,7 +1,7 @@
 <?php
 /**
  * @version    $Id$
- * @package    IG_UNIFORM_Framework
+ * @package    IG_CONTACTFORM_Framework
  * @author     InnoThemes Team <support@innothemes.com>
  * @copyright  Copyright (C) 2012 InnoThemes.com. All Rights Reserved.
  * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@
 /**
  * Custom meta box initialization.
  *
- * @package  IG_UNIFORM_Framework
+ * @package  IG_CONTACTFORM_Framework
  * @since    1.0.0
  */
 class IG_Init_Meta_Box {
@@ -33,9 +33,9 @@ class IG_Init_Meta_Box {
 	 *     array(
 	 *         'id' => 'sample_meta_box',
 	 *         'title' => 'Sample Meta Box',
-	 *         'callback' => array( 'ig_uniform_Meta_Box', 'render_meta_box' ),
+	 *         'callback' => array( 'ig_contactform_Meta_Box', 'render_meta_box' ),
 	 *         'post_type' => 'sample_post_type',
-	 *         'save_post' => array( 'ig_uniform_Meta_Box', 'save_meta_box_data' )
+	 *         'save_post' => array( 'ig_contactform_Meta_Box', 'save_meta_box_data' )
 	 *     )
 	 * );
 	 *

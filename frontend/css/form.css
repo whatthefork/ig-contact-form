@@ -19,17 +19,17 @@
     z-index: 2147483648 !important;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content hr {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content hr {
     margin: 10px 0;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content span.required {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content span.required {
     color: red;
     font-weight: bold;
     margin: 0 5px;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-group {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-group {
     border: 1px solid transparent;
     margin-bottom: 0px;
     padding: 10px;
@@ -39,34 +39,34 @@
     -webkit-transition: background 0.3s ease-out;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-group.ui-state-highlight {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-group.ui-state-highlight {
     background: none;
     border-color: #FBEED5;
     background-color: #FCF8E3;
     position: static;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-style-dark .jsn-form-content .control-group.ui-state-highlight {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-style-dark .jsn-form-content .control-group.ui-state-highlight {
     border-color: #666;
     background-color: #444;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-label {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-label {
     font-weight: bold;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap form.form-horizontal .jsn-form-content .control-group .row-fluid,
-.ig-uniform.jsn-master .jsn-bootstrap form.form-horizontal .jsn-form-content .control-group .row-fluid [class*="span"] input {
+.ig-contactform.jsn-master .jsn-bootstrap form.form-horizontal .jsn-form-content .control-group .row-fluid,
+.ig-contactform.jsn-master .jsn-bootstrap form.form-horizontal .jsn-form-content .control-group .row-fluid [class*="span"] input {
     margin-bottom: 10px;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .radio,
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .checkbox {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .radio,
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .checkbox {
     display: inline-block;
     width: 90%;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .ig-value-Others {
+.ig-contactform.jsn-master .jsn-bootstrap .jsn-form-content .control-group .ig-value-Others {
     display: block;
 }
 
@@ -78,16 +78,16 @@
     text-align: left;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap input[type="file"] {
+.ig-contactform.jsn-master .jsn-bootstrap input[type="file"] {
    line-height: inherit;
    height: auto;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap .placeholder {
+.ig-contactform.jsn-master .jsn-bootstrap .placeholder {
     color: #aaa;
 }
 
-.ig-uniform.jsn-master .jsn-bootstrap select {
+.ig-contactform.jsn-master .jsn-bootstrap select {
     height: auto;
 }
 
@@ -208,61 +208,61 @@
 .jsn-master .jsn-bootstrap .form-horizontal .ig-group-field .input-append {
     margin-bottom: 9px;
 }
-.ig-uniform.jsn-master .jsn-bootstrap .row-fluid input.span12{
+.ig-contactform.jsn-master .jsn-bootstrap .row-fluid input.span12{
     width: 97%;
 }
 /**
 Fix captcha google
 **/
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap #recaptcha_area #recaptcha_response_field {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap #recaptcha_area #recaptcha_response_field {
     right: 0;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap #recaptcha_area .recaptcha_r2_c1 {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap #recaptcha_area .recaptcha_r2_c1 {
     background: url("http://www.google.com/recaptcha/api/img/white/sprite.png") no-repeat scroll -27px 0 transparent;
     height: 57px;
     width: 9px;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r2_c2 {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r2_c2 {
     background: url("http://www.google.com/recaptcha/api/img/white/sprite.png") no-repeat scroll -18px 0 transparent;
     height: 57px;
     width: 9px;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r3_c1 {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r3_c1 {
     background: url("http://www.google.com/recaptcha/api/img/white/sprite.png") no-repeat scroll -9px 0 transparent;
     height: 63px;
     width: 9px;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r3_c3 {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap #recaptcha_area .recaptchatable .recaptcha_r3_c3 {
     background: url("http://www.google.com/recaptcha/api/img/white/sprite.png") no-repeat scroll 0 0 transparent;
     height: 63px;
     width: 9px;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls div.choices,
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls div.checkboxes {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls div.choices,
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls div.checkboxes {
     margin-right: 15px;
 }
 
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend .add-on{
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend .add-on{
     border-radius: 0 4px 4px 0;
     margin-left: -1px;
 }
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-append .btn {
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-append .btn {
     border-radius: 4px 0 0 4px;
     margin-right: -1px;
 }
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-append .uneditable-input,
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-append select,
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-append input{
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-append .uneditable-input,
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-append select,
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-append input{
     border-radius: 0px 4px 4px 0px;
 }
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend input,
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend select,
-html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend .uneditable-input{
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend input,
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend select,
+html[dir="rtl"] .ig-contactform.jsn-master .jsn-bootstrap .control-group .controls .input-prepend .uneditable-input{
     border-radius: 4px 0px 0px 4px;
 }
 /*==================== SUBMISSIONS MANAGER ====================*/
@@ -438,7 +438,7 @@ html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .
 .jsn-master .jsn-bootstrap .ig-narrow .input-small,
 .jsn-master .jsn-bootstrap .ig-narrow .input-medium,
 .jsn-master .jsn-bootstrap .ig-narrow .input-file,
-.jsn-master .jsn-bootstrap .ig-narrow .jsn-column-item.ig-uniform-others textarea.ig-value-Others {
+.jsn-master .jsn-bootstrap .ig-narrow .jsn-column-item.ig-contactform-others textarea.ig-value-Others {
     width: 95% !important;
 }
 
@@ -456,7 +456,7 @@ html[dir="rtl"] .ig-uniform.jsn-master .jsn-bootstrap .control-group .controls .
     width: 40% !important;
 }
 
-.jsn-master .jsn-bootstrap .ig-narrow .jsn-column-item.ig-uniform-others {
+.jsn-master .jsn-bootstrap .ig-narrow .jsn-column-item.ig-contactform-others {
     clear: both;
 }
 
@@ -630,7 +630,7 @@ html[dir="rtl"] .jsn-master .ig-narrow .jsn-row-container label{
     max-width: 350px;
     max-height: 200px;
 }
-.ig-uniform .jsn-bootstrap .text-center {
+.ig-contactform .jsn-bootstrap .text-center {
     text-align: center;
 }
 #submissions-list .jsn-bootstrap strong,
@@ -653,7 +653,7 @@ html[dir="rtl"] .jsn-master .ig-narrow .jsn-row-container label{
 .ui-timepicker-div select{
     width: auto;
 }
-.ig-uniform.jsn-master *{
+.ig-contactform.jsn-master *{
     -moz-box-sizing: content-box;
 }
 .jsn-row-container .input-append .ui-datepicker-trigger{
@@ -662,7 +662,7 @@ html[dir="rtl"] .jsn-master .ig-narrow .jsn-row-container label{
 .jsn-bootstrap .gm-style-iw .thumbnail .caption h4{
     clear: none;
 }
-.ig-uniform .jsn-bootstrap .form-horizontal .control-label{
+.ig-contactform .jsn-bootstrap .form-horizontal .control-label{
     width: 175px;
 }
 .jsn-bootstrap .google_maps img{
@@ -693,7 +693,7 @@ smartphone layout (320 - 480): everything is layout in single column
     .jsn-master .jsn-bootstrap .input-small,
     .jsn-master .jsn-bootstrap .input-medium,
     .jsn-master .jsn-bootstrap .input-file,
-    .jsn-master .jsn-bootstrap .jsn-column-item.ig-uniform-others textarea.ig-value-Others {
+    .jsn-master .jsn-bootstrap .jsn-column-item.ig-contactform-others textarea.ig-value-Others {
         width: 95% !important;
     }
 
@@ -710,7 +710,7 @@ smartphone layout (320 - 480): everything is layout in single column
     .jsn-master .ig-daterangepicker.hasDatepicker {
         width: 40% !important;
     }
-    .jsn-master .jsn-bootstrap .jsn-column-item.ig-uniform-others {
+    .jsn-master .jsn-bootstrap .jsn-column-item.ig-contactform-others {
         clear: both;
     }
     .jsn-master .jsn-bootstrap .control-group .row-fluid .span6 {

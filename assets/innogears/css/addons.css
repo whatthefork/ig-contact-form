@@ -2,7 +2,7 @@
  * @version    $Id$
  * @package    IG_Library
  * @author     InnoGears Team <support@innogears.com>
- * @copyright  Copyright (C) 2012 InnoGears.com. All Rights Reserved.
+ * @copyright  Copyright (C) 2014 InnoGears.com. All Rights Reserved.
  * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Websites: http://www.innogears.com
@@ -25,7 +25,7 @@
 	display: inline-block;
 	min-width: 16px;
 	min-height: 16px;
-	background: url(../../3rd-party/jsn/images/icons-16/icon-16-loading-circle.gif) 0 50% no-repeat !important;
+	background: url(../../3rd-party/bs2/jsn/images/icons-16/icon-16-loading-circle.gif) 0 50% no-repeat !important;
 	color: #333333 !important;
 }
 .modal-footer .ig-loading,
