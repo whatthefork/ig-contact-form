@@ -13,15 +13,14 @@ The easiest drag-and-drop contact form builder that lets you create various form
 
 [vimeo https://vimeo.com/97087072]
 
-* <a http://demo.innogears.com/ig-contactform/">Live Demo</a>
-* <a href="http://www.innogears.com/docs/ig-contactform/">Documentation</a>
-
-
 IG Contact Form is an extremely easy-to-use contact form builder for anyone who wants to build online forms. With this plugin, you can easily create contact form, online survey form, registration form or other complex forms for your WordPress website within a few minutes. 
 
 You'll surely love this contact form builder for its intuitive and highly UX-focused features: clean, responsive, drag-and-drop interface, various form options, easy configuration, no coding required, allowing a custom-built look and easy developer deployment as well as many more features.
 
 Download and use IG Contact Form and you'll see it's the only WordPress contact form builder plugin you'll ever need.
+
+* <a href="http://demo.innogears.com/ig-contactform/">LIVE DEMO</a>
+* <a href="http://www.innogears.com/docs/ig-contactform/">DOCUMENTATION</a>
 
 <h4>Key Features:</h4>
 
