@@ -19,8 +19,8 @@ You'll surely love this contact form builder for its intuitive and highly UX-foc
 
 Download and use IG Contact Form and you'll see it's the only WordPress contact form builder plugin you'll ever need.
 
-* <a href="http://demo.innogears.com/ig-contactform/">LIVE DEMO</a>
-* <a href="http://www.innogears.com/docs/ig-contactform/">DOCUMENTATION</a>
+* <a href="http://demo.innogears.com/ig-contactform/">Live Demo</a>
+* <a href="http://www.innogears.com/docs/ig-contactform/">User Manual</a>
 
 <h4>Key Features:</h4>
 
